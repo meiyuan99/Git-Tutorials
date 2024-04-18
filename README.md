@@ -1484,7 +1484,7 @@ v2 分支中的 log 如下，我想要它的  553587b - add f.py這個 commit
 
 假設我 commit history 為 A1 -> A2 -> A3 -> A4 -> A5 -> A6
 
-我現在想要回 A4 這個 commit , 這時候我就可以使用  git revert ！！
+我現在想要回 A4 這個 commit , 這時候我就可以使用 git revert ！！
 
 先 revert A6
 
@@ -1504,9 +1504,15 @@ A1 -> A2 -> A3 -> A4 -> A5 -> A6 -> A6_revert -> A5_revert
 
 這時候，其實你的 commit 就是在 A4 這個位置 。
 
-使用 git revert 的好處，就是可以保留 commit history , 萬一你又後悔了，
+使用 git revert 的好處，就是可以保留 commit history, 萬一你又後悔了，
 
 也可以在 revert 回去。
+
+如果你想要 revert 最新的 commit, 只需要使用 HEAD
+
+```cmd
+git revert HEAD
+```
 
 ## 解決衝突
 
@@ -1937,6 +1943,10 @@ git config --global alias.ck checkout
 ```
 
 ```cmd
+git config --global alias.sw switch
+```
+
+```cmd
 git config --global alias.cm commit
 ```
 
@@ -2108,7 +2118,7 @@ git remote set-url origin git@blue.github.com:blue-rubiks/t11.git
 
 * [Youtube Tutorial - github PR (Pull Request) 教學](https://youtu.be/bXOdD-bKfkA) - [文章快速連結](https://github.com/twtrubiks/Git-Tutorials/tree/master/pr-tutorial#github-pr-pull-request-%E6%95%99%E5%AD%B8)
 
-* [Youtube Tutorial - github CLI PR 教學](https://youtu.be/AD8X11lq3gQ) - [文章快速連結](https://github.com/twtrubiks/Git-Tutorials/tree/master/pr-tutorial#github-cli-pr-%E6%95%99%E5%AD%B8)
+* [Youtube Tutorial - github CLI PR 教學 - gh](https://youtu.be/AD8X11lq3gQ) - [文章快速連結](https://github.com/twtrubiks/Git-Tutorials/tree/master/pr-tutorial#github-cli-pr-%E6%95%99%E5%AD%B8)
 
 [PR (Pull Request) 教學](https://github.com/twtrubiks/Git-Tutorials/tree/master/pr-tutorial)
 
