@@ -1,27 +1,27 @@
-# Git-Tutorials 基本使用教學  :memo:
+a# Git-Tutorials ?�本使用?�學  :memo:
 
-因為小弟覺得這東西蠻有趣的，所以就簡單寫個教學文，順便記錄一下:memo:，希望能幫助想學的人:smile:
+?�為小�?覺�??�東西蠻?�趣?��??�以就簡單寫個�?學�?，�?便�??��?�?memo:，�??�能幫助?�學?�人:smile:
 
-如果教學有誤再請糾正:sweat_smile:
+如�??�學?�誤?��?糾正:sweat_smile:
 
-基本使用指令以及安裝可參考小弟之前拍的影片
+?�本使用?�令以�?安�??��??��?弟�??��??�影??
 
-* [Youtube Tutorial - github基本教學 - 從無到有](https://www.youtube.com/watch?v=py3n6gF5Y00)
+* [Youtube Tutorial - github?�本?�學 - 從無?��?](https://www.youtube.com/watch?v=py3n6gF5Y00)
 
-影片教學包含如何產生 **SSH key**
+影�??�學?�含如�??��? **SSH key**
 
-如果步驟正確且沒出錯誤，可以在路徑下找到 **.ssh資料夾**，裡面有 **id_rsa** 以及 **id_rsa.pub** 兩個檔案，
+如�?步�?�?��且�??�錯誤�??�以?�路徑�??�到 **.ssh資�?�?*，裡?��? **id_rsa** 以�? **id_rsa.pub** ?�個�?案�?
 
-這兩個就是 SSH Key， **id_rsa是私鑰** ，不能洩露出去， **id_rsa.pub是公鑰** ，可以很放心的告訴任何人。
+?�兩?�就??SSH Key�?**id_rsa?��???* ，�??�洩?�出?��? **id_rsa.pub?�公??* ，可以�??��??��?訴任何人??
 
-安裝完 Git 之後，要做的第一件事情就是去設定自己的名字和信箱
+安�?�?Git 之�?，�??��?第�?件�??�就?�去設�??�己?��?字�?信箱
 
 ```cmd
 git config --global user.name "twtrubiks"
 git config --global user.email "twtrubiks@gmail.com"
 ```
 
-可以輸入以下來確認是否輸入成功
+?�以輸入以�?來確認是?�輸?��???
 
 ```cmd
 git config --global user.name
@@ -30,50 +30,50 @@ git config --global user.email
 
 ![alt tag](https://i.imgur.com/5mpS7Ij.jpg)
 
-Git 設定資料查看，可執行以下指令 ( 文章末會有較詳細的教學 )：
+Git 設�?資�??��?，可?��?以�??�令 ( ?��??��??��?詳細?��?�?)�?
 
 ```cmd
 git config --list
 ```
 
-## git init 指令
+## git init ?�令
 
-初始化 git
+?��???git
 
 ```cmd
 git init
 ```
 
-也可以指定資料夾
+也可以�?定�??�夾
 
 ```cmd
 git init <directory>
 ```
 
-## git clone 指令
+## git clone ?�令
 
-複製如圖位置網址 ( 不要複製我的哦~ 複製你自己的 )
+複製如�?位置網�? ( 不�?複製?��??�~ 複製你自己�? )
 ![alt tag](https://i.imgur.com/EJ5JNjt.jpg)
 
-git clone ( 複製的網址 ) SSH / HTTPS
+git clone ( 複製?�網?� ) SSH / HTTPS
 
-( 如果你要使用 https 的方式, 請接著看 [Personal Access Tokens](https://github.com/twtrubiks/Git-Tutorials#personal-access-tokens) )
+( 如�?你�?使用 https ?�方�? 請接?��? [Personal Access Tokens](https://github.com/twtrubiks/Git-Tutorials#personal-access-tokens) )
 
 ```cmd
 git clone git@github.com:twtrubiks/test.git
 ```
 
-第一次會出現 SSH 警告，選 YES 即可。
+第�?次�??�現 SSH 警�?，選 YES ?�可??
 
-如圖 ( 下載成功 )，在你的下載路徑下就會多出一個資料夾
+如�? ( 下�??��? )，在你�?下�?路�?下就?��??��??��??�夾
 
 ![alt tag](https://i.imgur.com/iIkTlqf.jpg)
 
 ## Personal Access Tokens
 
-* [Youtube Tutorial - GitHub 教學 - Personal Access Tokens](https://youtu.be/aJRRVCB85k8)
+* [Youtube Tutorial - GitHub ?�學 - Personal Access Tokens](https://youtu.be/aJRRVCB85k8)
 
-從 2021/8/13 開始, 如果你用 https 的方式你會發現
+�?2021/8/13 ?��?, 如�?你用 https ?�方式�??�發??
 
 ![alt tag](https://i.imgur.com/6YIJSaj.png)
 
@@ -83,124 +83,124 @@ remote: Please see https://docs.github.com/en/get-started/getting-started-with-g
 fatal: Authentication failed for 'https://github.com/xxxxx.git/'
 ```
 
-這時候如果我們不想加入 ssh key, 也不想透過加入共同協做的方式,
+?��??��??��??��??��???ssh key, 也�??�透�??�入?��??��??�方�?
 
-可以透過這個 Personal Access Tokens (你可以把他想成臨時的權限),
+?�以?��??��?Personal Access Tokens (你可以�?他想?�臨?��?權�?),
 
-先到你的 github 裡的 Settings -> Developer settings,
+?�到你�? github 裡�? Settings -> Developer settings,
 
-選 Personal Access Tokens, 產生你的 token
+??Personal Access Tokens, ?��?你�? token
 
 ![alt tag](https://i.imgur.com/zPVlOjf.png)
 
-時間這邊你可以自己定義多久後會過期,
+?��??��?你可以自己�?義�?久�??��???
 
-下面的部份則是這個 token 有哪些權限,
+下面?�部份�??�這�?token ?�哪些�???
 
 ![alt tag](https://i.imgur.com/NNJcYRM.png)
 
-設定完之後, 就可以複製你的 token
+設�?完�?�? 就可以�?製�???token
 
 ![alt tag](https://i.imgur.com/q4htIBn.png)
 
-再回去用 https clone 的方式,
+?��??�用 https clone ?�方�?
 
-原本是使用, 帳號 + password (已經不能使用了),
+?�本?�使?? 帳�? + password (已�?不能使用�?,
 
-現在改成, 帳號 + 剛剛的 token 就可以順利 clone 了.
+?�在?��?, 帳�? + ?��???token 就可以�???clone �?
 
-### 如何改善(加速)大型 repo git clone 速度
+### 如�??��?(?��?大�? repo git clone ?�度
 
-* [Youtube Tutorial - 如何改善(加速)大型 repo git clone 速度](https://youtu.be/YHX0qkQa1UI)
+* [Youtube Tutorial - 如�??��?(?��?大�? repo git clone ?�度](https://youtu.be/YHX0qkQa1UI)
 
-有時候我們會需要 clone 很大的 repo，執行 `git clone` 都需要很長的時間，是不是有方法可以
+?��??��??��??��?clone 很大??repo，執�?`git clone` ?��?要�??��??��?，是不是?�方法可�?
 
-加速 clone 的速度呢 :question:
+?��?clone ?�速度??:question:
 
-直接開始動手嘗試 ( 使用 [django](https://github.com/django/django) 當範例 )，
+?�接?��??��??�試 ( 使用 [django](https://github.com/django/django) ?��?�?)�?
 
 `git clone git@github.com:django/django.git`
 
-( 你會發現 clone 需要一些時間 :triumph:)
+( 你�??�現 clone ?�要�?些�???:triumph:)
 
 ![alt tag](https://i.imgur.com/yMH6L8F.png)
 
-接著查看 log，`git log`
+?��??��? log，`git log`
 
 ![alt tag](https://i.imgur.com/vJkFTr2.png)
 
-嘗試切換 branch `git checkout stable/2.2.x`
+?�試?��? branch `git checkout stable/2.2.x`
 
 ![alt tag](https://i.imgur.com/UtxJ2ER.png)
 
-開始改善(加速) clone 的時間，
+?��??��?(?��? clone ?��??��?
 
-可以透過 `--depth` 這個參數來完成，簡單說明一下他的功能，當我們一般執行 clone 之後，
+?�以?��? `--depth` ?�個�??��?完�?，簡?�說?��?下�??��??��??��??��??�執�?clone 之�?�?
 
-接著執行 `git log` 你會發現有大量的 log，在某修情況下，你可能不需要那麼多的 log，
+?��??��? `git log` 你�??�現?�大?��? log，在?�修?��?下�?你可?��??�要那麼�???log�?
 
-也就是說你可能只需要最近 10 筆的 history commit，甚至你只需要 1 筆 ( 也就是根本不需要
+也就?�說你可?�只?�要�?�?10 筆�? history commit，�??��??��?�?1 �?( 也就?�根?��??��?
 
-history commit )，這時候就很適合使用 `--depth`。
+history commit )，這�??�就很適?�使??`--depth`??
 
 `git clone git@github.com:django/django.git --depth 1`
 
-( 你會發現這次快很多了 )
+( 你�??�現?�次快�?多�? )
 
 ![alt tag](https://i.imgur.com/yvkZUZI.png)
 
-接著查看 log，`git log`
+?��??��? log，`git log`
 
-( 會變快的原因是因為我們只保留最新的一筆 history commit ，
+( ?��?快�??��??��??��??�只保�??�?��?一�?history commit �?
 
-如果你需要最近 10 筆，改成 --depth 10 即可 )
+如�?你�?要�?�?10 筆�??��? --depth 10 ?�可 )
 
 ![alt tag](https://i.imgur.com/at9Zzq3.png)
 
-但是會有一個問題，當嘗試切換 branch `git checkout stable/2.2.x`
+但是?��?一?��?題�??��?試�???branch `git checkout stable/2.2.x`
 
-( 你會發現你無法切換 remote branch :scream:
+( 你�??�現你無法�???remote branch :scream:
 
-原因是因為使用 `--depth` 相當於是 `--single-branch`，
+?��??��??�使??`--depth` ?�當?�是 `--single-branch`�?
 
-所以當然沒有其他的 branch。 )
+?�以當?��??�其他�? branch??)
 
 ![alt tag](https://i.imgur.com/gDaeq1W.png)
 
-也就是說以下兩條指令其實是相等的
+也就?�說以�??��??�令?�實?�相等�?
 
 ```cmd
 git clone git@github.com:django/django.git --depth 1
 git clone git@github.com:django/django.git --depth 1 --single-branch
 ```
 
-為了解決這個問題，比較好的做好應該是這樣
+?��?�?��?�個�?題�?比�?好�??�好?�該?�這樣
 
 ```cmd
 git clone git@github.com:django/django.git --depth 1 --no-single-branch
 ```
 
-( 這個和 `--single-branch` 比會稍微久一點點，因為每個 branch 的最新一個 history commit 都要 clone 下來 )
+( ?�個�? `--single-branch` 比�?稍微久�?點�?，�??��???branch ?��??��???history commit ?��? clone 下�? )
 
-這樣的話，就可以保留 remote 的 branch 了，
+?�樣?�話，就?�以保�? remote ??branch 了�?
 
 ![alt tag](https://i.imgur.com/BkLKVZz.png)
 
-成功切換 remote 的 branch， `git checkout stable/2.2.x`。
+?��??��? remote ??branch�?`git checkout stable/2.2.x`??
 
 ![alt tag](https://i.imgur.com/VCvcSTr.png)
 
-最後稍微整理，
+?�後�?微整?��?
 
-如要 clone 最近一次的 history，而且也需要其他 branch，使用如下，
+如�? clone ?�近�?次�? history，而�?也�?要其�?branch，使?��?下�?
 
 `git clone git@github.com:django/django.git --depth 1 --no-single-branch`
 
-如果你想要指定分支, 加上 `-b`,
+如�?你想要�?定�??? ?��? `-b`,
 
 `git clone git@github.com:django/django.git --depth 1 --no-single-branch -b stable/3.1.x`
 
-如要 clone 最近一次的 history，而且**不需要**其他 branch，使用如下，
+如�? clone ?�近�?次�? history，而�?**不�?�?*?��? branch，使?��?下�?
 
 `git clone git@github.com:django/django.git --depth 1 --single-branch`
 
@@ -208,66 +208,66 @@ or
 
 `git clone git@github.com:django/django.git --depth 1`
 
-更多詳細參數說明請參考 [git clone](https://git-scm.com/docs/git-clone)
+?��?詳細?�數說�?請�???[git clone](https://git-scm.com/docs/git-clone)
 
-## git status 指令
+## git status ?�令
 
 ```cmd
 git status
 ```
 
-可以讓我們觀看目前的 repository ( repo 容器 )。
+?�以讓�??��??�目?��? repository ( repo 容器 )??
 
 ![alt tag](https://i.imgur.com/5Gt98Vh.jpg)
 
-意思是目前你的工作區是乾淨的。
+?�思是?��?你�?工�??�?�乾淨�???
 
-## 工作區與暫存區 ( Stage )
+## 工�??�?�暫存�? ( Stage )
 
-git add 意思是把要送出的文件放到暫存區 ( Stage ) ，
+git add ?�思是?��??�出?��?件放?�暫存�? ( Stage ) �?
 
-然後執行
+?��??��?
 
-git commit 就可以把暫存區 ( Stage ) 裡所有修改的內容送到目前的分支上。
+git commit 就可以�??��??� ( Stage ) 裡�??�修?��??�容?�到?��??��??��???
 
-一旦送出 ( git commit ) 後，如果你又沒有對工作區做任何修改，那麼工作區就是"乾淨"的。
+一?�送出 ( git commit ) 後�?如�?你�?沒�?對工作�??�任何修?��???��工�??�就是"乾淨"?��?
 
-git commit -m "xxxxx" 指令，-m 後面輸入的內容是本次修改 ( 送出 ) 的說明，
+git commit -m "xxxxx" ?�令�?m 後面輸入?�內容是?�次修改 ( ?�出 ) ?�說?��?
 
-盡量輸入一眼就可以看出這次送出修改了什麼的內容
-( 方便以後回去觀看能快速了解此次 commit 修改了什麼 )。
+?��?輸入一?�就?�以?�出?�次?�出修改了�?麼�??�容
+( ?�便以�??�去觀?�能快速�?�?���?commit 修改了�?�?)??
 
-以下 demo 為在一個資料夾內新增一個 Hello.py 檔案
+以�? demo ?�在一?��??�夾?�新增�???Hello.py 檔�?
 
-然後使用 git status 觀看目前的 repository ( repo 容器 )，你會看到 Hello.py 未被追蹤，如下圖
+?��?使用 git status 觀?�目?��? repository ( repo 容器 )，�??��???Hello.py ?�被追蹤，�?下�?
 
 ![alt tag](https://i.imgur.com/dvj1DQh.jpg)
 
-可以使用如下指令
+?�以使用如�??�令
 
 ```cmd
 git add Hello.py
 ```
 
-額外補充，下面這個指令很有趣，大家可以玩玩看
+額�?補�?，�??�這個�?令�??�趣，大家可以玩?��?
 
 ```cmd
 git add -p
 ```
 
-接著再使用
+?��??�使??
 
-git commit -m "文字"
+git commit -m "?��?"
 
 ```cmd
 git commit -m "add Hello.py"
 ```
 
-再使用 git status，你會發現工作區變乾淨了。如下圖
+?�使??git status，�??�發?�工作�?變乾淨�??��?下�?
 
 ![alt tag](https://i.imgur.com/6VrieNb.jpg)
 
-補充，如果只有輸入
+補�?，�??�只?�輸??
 
 ```cmd
 git commit
@@ -275,31 +275,31 @@ git commit
 
 ![alt tag](https://i.imgur.com/yZxKGTU.jpg)
 
-這時會跳出編輯視窗
+?��??�跳?�編輯�?�?
 
 ![alt tag](https://i.imgur.com/htNQ0dJ.jpg)
 
-這時可以按鍵盤的 **Ins鍵** ( 或按鍵盤上的 **英文字 i** ) 即可輸入文字
+?��??�以?�鍵?��? **Ins??* ( ?��??�盤上�? **?��?�?i** ) ?�可輸入?��?
 
 ![alt tag](https://i.imgur.com/NFy16dp.jpg)
 
-輸入完先按 **Esc鍵** ，按完後底下的 INSERT 會消失，接著直接打 **:wq** ，再按 enter 就會儲存並離開了。
+輸入完�???**Esc??* ，�?完�?底�???INSERT ?��?失�??��??�接??**:wq** ，�???enter 就�??��?並離?��???
 
-更多參數可參考 [https://git-scm.com/docs/git-commit](https://git-scm.com/docs/git-commit) 說明。
+?��??�數?��???[https://git-scm.com/docs/git-commit](https://git-scm.com/docs/git-commit) 說�???
 
-**如何修改最後一次的commit呢 ?**
+**如�?修改?�後�?次�?commit???**
 
-有時候我們 commit 完之後，才發現自己的 commit 內容手殘打錯了
+?��??��???commit 完�?後�??�發?�自己�? commit ?�容?��??�錯�?
 
-這時候可以使用如下指令，他會跳出編輯視窗給你編輯你上一次的 commit 內容。
+?��??�可以使?��?下�?令�?他�?跳出編輯視�?給�?編輯你�?一次�? commit ?�容??
 
 ```cmd
 git commit --amend
 ```
 
-又或是我們 commit 完之後，才發現自己漏了幾個檔案沒有 add 進去
+?��??��???commit 完�?後�??�發?�自己�?了幾?��?案�???add ?�去
 
-這時候可以使用如下指令
+?��??�可以使?��?下�?�?
 
 ```cmd
 git commit -m "init commit"
@@ -307,62 +307,62 @@ git add missing_file.py
 git commit --amend
 ```
 
-如上狀況為當我 git commit -m "init commit" 之後，
+如�??�況為?��? git commit -m "init commit" 之�?�?
 
-我發現我漏掉了 **missing_file.py** 這個檔案 ( commit 前忘記 add 進去 ) ，
+?�發?��?漏�?�?**missing_file.py** ?�個�?�?( commit ?��?�?add ?�去 ) �?
 
-這時候就可以使用 git commit --amend 來修改最後一次的 commit 。
+?��??�就?�以使用 git commit --amend 來修?��?後�?次�? commit ??
 
-有時候我們會為了方便，直接使用下面的指令一次加入全部的檔案
+?��??��??��??��??�便，直?�使?��??��??�令一次�??�全?��?檔�?
 
 ```cmd
 git add .
 ```
 
-但是加完後發現其實有些檔案是不需要 add 進入的，這時候就可以使用如下指令去取消 add
+但是?��?後發?�其實�?些�?案是不�?�?add ?�入?��??��??�就?�以使用如�??�令?��?�?add
 
 ```cmd
 git reset HEAD <file>
 ```
 
-範例，路徑下有 A.py 以及 B.py 這兩個檔案，然後我使用 **git add .** 加入，
+範�?，路徑�???A.py 以�? B.py ?�兩?��?案�??��??�使??**git add .** ?�入�?
 ![alt tag](https://i.imgur.com/0S7TcEB.jpg)
 
-但加入完我發現其實 B.py 我還沒有要 add 進入，所以我這時候就可以使用 **git reset HEAD B.py** 去還原。
+但�??��??�發?�其�?B.py ?��?沒�?�?add ?�入，�?以�??��??�就?�以使用 **git reset HEAD B.py** ?��??��?
 
 ![alt tag](https://i.imgur.com/3iAyEEx.jpg)
 
-## git push 指令
+## git push ?�令
 
 ```cmd
 git push
 ```
 
-將程式 push 到 github ( or bitbucket 之類 )上 , 如下圖
+將�?�?push ??github ( or bitbucket 之�? )�?, 如�???
 
 ![alt tag](https://i.imgur.com/d61Pau6.jpg)
 
-## 版本控制 - 歷史記錄
+## ?�本?�制 - 歷史記�?
 
 ```cmd
 git log
 ```
 
-按 **小寫q** 可退出
+??**小寫q** ?�退??
 
 ![alt tag](https://i.imgur.com/j11afCP.jpg)
 
-如果覺得版面太雜，可以使用下列指令
+如�?覺�??�面太�?，可以使?��??��?�?
 
 ```cmd
 git log --pretty=oneline
 ```
 
-按 **小寫q** 可退出
+??**小寫q** ?�退??
 
 ![alt tag](https://i.imgur.com/jz2cwUA.jpg)
 
-另外底下也是一個看 log 的方式（ 很酷 :satisfied:），有 GUI 的感覺（ 來源為文章最後的連結 ）
+?��?底�?也是一?��? log ?�方式�? 很酷 :satisfied:）�???GUI ?��?覺�? 來�??��?章�?後�???? �?
 
 ```cmd
 git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --date=relative
@@ -370,7 +370,7 @@ git log --graph --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(
 
 ![alt tag](https://i.imgur.com/XNQisuf.png)
 
-Git 中，使用 HEAD 表示目前的版本，
+Git 中�?使用 HEAD 表示?��??��??��?
 
 ```cmd
 git reset --hard HEAD
@@ -378,9 +378,9 @@ git reset --hard HEAD
 
 ![alt tag](https://i.imgur.com/pkFO8pk.jpg)
 
-如果現在要把目前版本退回到上一個版本，就可以使用 git reset 指令：
+如�??�在要�??��??�本?�?�到上�??��??��?就可以使??git reset ?�令�?
 
-上一個版本就是HEAD~1，
+上�??��??�就?�HEAD~1�?
 
 ```cmd
 git reset --hard HEAD~1
@@ -388,9 +388,9 @@ git reset --hard HEAD~1
 
 ![alt tag](https://i.imgur.com/ZThoaUT.jpg)
 
-上上一個版本就是HEAD~2，
+上�?一?��??�就?�HEAD~2�?
 
-如果要指定回到某個特定版本：
+如�?要�?定�??��??�特定�??��?
 
 ![alt tag](https://i.imgur.com/KrCOC71.jpg)
 
@@ -398,25 +398,25 @@ git reset --hard HEAD~1
 git reset --hard ad41df36b7
 ```
 
-`--hard` 這個參數，有三種選擇，分別為 `--mixed`( default ）`--hard` `--soft`，
+`--hard` ?�個�??��??��?種選?��??�別??`--mixed`( default ）`--hard` `--soft`�?
 
-`--hard` 這個參數簡單解釋就是將之前的 commit 都丟掉（ 完全 **不保留** ）。
+`--hard` ?�個�??�簡?�解?�就?��?之�???commit ?��??��? 完全 **不�???* ）�?
 
-`--soft` 這個參數簡單解釋就是將之前的 commit 都丟掉，但 **保留** 你之前工作區的狀態。
+`--soft` ?�個�??�簡?�解?�就?��?之�???commit ?��??��?�?**保�?** 你�??�工作�??��??��?
 
-`--hard` 和 `--soft` 這兩個我覺得用文字不好說明，我建議大家自己可以動手玩玩看，就可以了解他們之間的差異。
+`--hard` ??`--soft` ?�兩?��?覺�??��?字�?好說?��??�建議大家自己可以�??�玩?��?，就?�以了解他們�??��?差異??
 
-`--soft` 很適合使用在將多個無意義的 commit 合併成一個 commit。
+`--soft` 很適?�使?�在將�??�無?�義??commit ?�併?��???commit??
 
 ![alt tag](https://i.imgur.com/6RVutiK.jpg)
 
-版本號 ( ad41df36b7 ) 沒必要全部都寫，寫前幾位就可以了，Git 會自動去找。
+?�本??( ad41df36b7 ) 沒�?要全?�都寫�?寫�?幾�?就可以�?，Git ?�自?�去?��?
 
-當你退回到某個版本，突然隔天後悔了，想恢復到之前的新版本該怎麼做呢?
+?��??�?�到?�個�??��?突然?�天後�?了�??�恢復到之�??�新?�本該怎麼?�呢?
 
-找不到新版本的 commit id 該怎麼辦呢?
+?��??�新?�本??commit id 該怎麼辦呢?
 
-這時候就可以使用一個指令
+?��??�就?�以使用一?��?�?
 
 ```cmd
 git reflog
@@ -424,53 +424,53 @@ git reflog
 
 ![alt tag](https://i.imgur.com/MaRlZZr.jpg)
 
-接著看你要回到哪個版本，再使用 git reset 即可。
+?��??��?要�??�哪?��??��??�使??git reset ?�可??
 
 ```cmd
 git reset --hard 642e7af
 ```
 
-有時候想消除( 覆蓋 )已經 push 出去的 commit，這時候我們可以使用
+?��??�想消除( 覆�? )已�? push ?�去??commit，這�??��??�可以使??
 
 ```cmd
 git push --force
 ```
 
-或是更簡短的寫法
+?�是?�簡?��?寫�?
 
 ```cmd
 git push -f
 ```
 
-可以強制 push。先回到某個版本，然後再強制 push。
+?�以強制 push?��??�到?�個�??��??��??�強??push??
 
-***注意！在多人專案共同開發時，盡量不要用 --force 這種方法，因為有時候會害到別人，建議可以使用 revert 。***
+***注�?！在多人專�??��??�發?��??��?不�???--force ?�種?��?，�??��??�候�?害到?�人，建議可以使??revert ??**
 
-因為上面這個原因，所以建議用另一種比較安全的方式
+?�為上面?�個�??��??�以建議用?��?種�?較�??��??��?
 
 ```cmd
 git push --force-with-lease
 ```
 
-可以確保你沒有隨便丟掉別人的 commit。（ 如果有人比你早 commit push 上去，你就會無法 push 到 remote ）
+?�以確�?你�??�隨便�??�別人�? commit?��? 如�??�人比�???commit push 上去，�?就�??��? push ??remote �?
 
 ## checkout
 
-也請參考 [git switch](https://github.com/twtrubiks/Git-Tutorials#git-switch) 和 [git restore](https://github.com/twtrubiks/Git-Tutorials#git-restore).
+也�??��?[git switch](https://github.com/twtrubiks/Git-Tutorials#git-switch) ??[git restore](https://github.com/twtrubiks/Git-Tutorials#git-restore).
 
-`git checkout -- file` 可以丟棄工作區的修改：
+`git checkout -- file` ?�以丟�?工�??�?�修?��?
 
 ```cmd
 git checkout  -- hello.py
 ```
 
-命令 git checkout -- hello.py 意思就是，把 hello.py 文件在工作區的修改全部撤銷 ( 丟棄 ) ，
+?�令 git checkout -- hello.py ?�思就?��???hello.py ?�件?�工作�??�修?�全?�撤??( 丟�? ) �?
 
-讓這個檔案回到最近一次 git commit 或 git add 時的狀態。
+讓這個�?案�??��?近�?�?git commit ??git add ?��??�?��?
 
 ![alt tag](https://i.imgur.com/SrCo4kH.jpg)
 
-當然也可以用 git reset 指令直接回到某個 commit。
+?�然也可以用 git reset ?�令?�接?�到?��?commit??
 
 ```cmd
 git reset --hard xxxxxx
@@ -480,9 +480,9 @@ git reset --hard xxxxxx
 git reset --hard 201f40604ec3b6fa8
 ```
 
-## 刪除
+## ?�除
 
-有兩種狀況，一種是確定要從版本庫中刪除該檔案，那就用命令 git rm 刪掉，並且 git commit：
+?�兩種�?況�?一種是確�?要�??�本庫中?�除該�?案�???��?�命�?git rm ?��?，並�?git commit�?
 
 ```cmd
 rm hello.py
@@ -492,7 +492,7 @@ git commit -m "remove hello.py"
 
 ![alt tag](https://i.imgur.com/sLMTDX7.jpg)
 
-另一種狀況是刪錯了，使用 git checkout 可以輕鬆還原檔案:
+?��?種�?況是?�錯了�?使用 git checkout ?�以輕�??��?檔�?:
 
 ```cmd
 rm hello.py
@@ -501,15 +501,15 @@ git checkout -- hello.py
 
 ![alt tag](https://i.imgur.com/5X2NcfS.jpg)
 
-## 新建與 合併 ( merge ) 分支 branch
+## ?�建???�併 ( merge ) ?�支 branch
 
-在說明分支 branch 之前，先給大家一個觀念。
+?�說?��???branch 之�?，�?給大家�??��?念�?
 
-通常開發的時候，大家都是從 **master** 做一個分支 branch 出去，最後再 **merge** 回 master，
+?�常?�發?��??��?大家?�是�?**master** ?��??��???branch ?�去，�?後�? **merge** ??master�?
 
-為什麼要這麼做呢 ?  因為要確保大家都是使用最新的 **master**
+?��?麼�??�麼?�呢 ?  ?�為要確保大家都?�使?��??��? **master**
 
-使用 git branch 指令查看目前的分支：
+使用 git branch ?�令?��??��??��??��?
 
 ```cmd
 git branch
@@ -517,34 +517,34 @@ git branch
 
 ![alt tag](https://i.imgur.com/SVblXD2.jpg)
 
-首先創建一個分支，bug1 分支 ( 名稱可以隨便取 )，然後切換到 bug1 分支：
+首�??�建一?��??��?bug1 ?�支 ( ?�稱?�以?�便??)，然後�??�到 bug1 ?�支�?
 
 ```cmd
 git branch bug1
 git checkout bug1
 ```
 
-git branch bug1 為創造一個名稱為 bug1 的分支，
+git branch bug1 ?�創?��??��?稱為 bug1 ?��??��?
 
-git checkout bug1 為切換到一個名稱為 bug1 的分支底下。
+git checkout bug1 ?��??�到一?��?稱為 bug1 ?��??��?下�?
 
 ![alt tag](https://i.imgur.com/JtGBHk4.jpg)
 
-以上兩行指令，相當於下列一行指令
+以�??��??�令，相?�於下�?一行�?�?
 
 ```cmd
 git checkout -b bug1
 ```
 
-(這邊教大家一個小技巧, 以下這個指令可以快速切換上一個分支, 和 `cd -` 概念一樣:exclamation:)
+(?��??�大家�??��??��? 以�??�個�?令可以快?��??��?一?��??? ??`cd -` 概念一�?exclamation:)
 
 ```cmd
 git checkout -
 ```
 
-我們在 bug1 分支上進行任何修改操作，
+?�們在 bug1 ?�支上進�?任�?修改?��?�?
 
-然後再把工作成果 ( 補充一下，修改任何內容後請記得使用 git add 指令和 git commit 指令 ) 合併到 master 分支上：
+?��??��?工�??��? ( 補�?一下�?修改任�??�容後�?記�?使用 git add ?�令??git commit ?�令 ) ?�併??master ?�支上�?
 
 ```cmd
 git checkout master
@@ -553,15 +553,15 @@ git merge bug1
 
 ![alt tag](https://i.imgur.com/pF4xDUE.jpg)
 
-git checkout master 為切換到一個名稱為 master 的分支底下。
+git checkout master ?��??�到一?��?稱為 master ?��??��?下�?
 
-git merge bug1 指令用於合併 ( bug1分支 ) 指定分支到目前分支 ( master ) 底下。
+git merge bug1 ?�令?�於?�併 ( bug1?�支 ) ?��??�支?�目?��???( master ) 底�???
 
-如果非常順利， git merge 的訊息裡會出現 Fast-forward，合併速度非常快。
+如�??�常?�利�?git merge ?��??�裡?�出??Fast-forward，�?併速度?�常快�?
 
-當然不是每次合併都能很順利的出現 Fast-forward，很多時候會出現衝突 CONFLICT 。
+?�然不是每次?�併?�能很�??��??�現 Fast-forward，�?多�??��??�現衝�? CONFLICT ??
 
-如果順利合併 ( merge ) 完成後，就可以刪除 (本機) bug1 分支：
+如�??�利?�併 ( merge ) 完�?後�?就可以刪??(?��?) bug1 ?�支�?
 
 ```cmd
 git branch -d dev
@@ -569,89 +569,89 @@ git branch -d dev
 
 ![alt tag](https://i.imgur.com/LmKKWxR.jpg)
 
-如果要丟掉一個沒有被合併過的分支，可以使用 git branch -D 分支名稱  強行刪除 (本機)。
+如�?要�??��??��??�被?�併?��??�支，可以使??git branch -D ?�支?�稱  強�??�除 (?��?)??
 
 ```cmd
 git branch -D dev
 ```
 
-那如果今天要刪除 remote 端的 branch 該怎麼辦呢:question:
+????��?天�??�除 remote 端�? branch 該怎麼辦呢:question:
 
-* [Youtube Tutorial - git 刪除查看遠端的分支 branch](https://youtu.be/0JQrT7nfm_c)
+* [Youtube Tutorial - git ?�除?��??�端?��???branch](https://youtu.be/0JQrT7nfm_c)
 
 ```cmd
 git push origin --delete {remote_branch}
 ```
 
-補充，git branch 也可以修改名稱，而且 commit id 是不會改變的，使用方法也很簡單，
+補�?，git branch 也可以修?��?稱�??��? commit id ?��??�改變�?，使?�方法�?很簡?��?
 
-可參考 git-branch [文件](https://git-scm.com/docs/git-branch#git-branch--m)，使用方法如下，
+?��???git-branch [?�件](https://git-scm.com/docs/git-branch#git-branch--m)，使?�方法�?下�?
 
 ```text
 git branch -m <name>
 ```
 
-原本的 b1 branch 分支的 log 如下，
+?�本??b1 branch ?�支??log 如�?�?
 
 ![alt tag](https://i.imgur.com/b1K1EUy.png)
 
-現在將 b1 branch 修改成 b2 branch，
+?�在�?b1 branch 修改??b2 branch�?
 
 ![alt tag](https://i.imgur.com/Twz5kRm.png)
 
-如果你仔細和剛剛的 log 比較，你會發現 log 的 commit id 是不會改變的，
+如�?你�?細�??��???log 比�?，�??�發??log ??commit id ?��??�改變�?�?
 
 ![alt tag](https://i.imgur.com/qMjqV3Z.png)
 
-## 使用特定 commit id 建立 branch
+## 使用?��? commit id 建�? branch
 
-有時候我們會想測試某個 commit 的狀態, 這時候可以直接利用 commit id 去建立一個 branch,
+?��??��??��??�測試�???commit ?��??? ?��??�可以直?�利??commit id ?�建立�???branch,
 
-方法如下,
+?��?如�?,
 
 ```cmd
 git checkout -b new_branch <commit id>
 ```
 
-這樣就會依照你指定的 commit id 去建立出一個 branch.
+?�樣就�?依照你�?定�? commit id ?�建立出一??branch.
 
-## 新建分支 branch 並 push
+## ?�建?�支 branch �?push
 
-相信大家有時候在 github 上面都會看到，如下圖，很多分支
+?�信大家?��??�在 github 上面?��??�到，�?下�?，�?多�???
 
 ![alt tag](https://i.imgur.com/wrIdlzS.jpg)
 
-那我們要如何建立分支呢? 首先，我們先看下面這張圖
+????��?如�?建�??�支?? 首�?，�??��??��??�這張??
 
 ![alt tag](https://i.imgur.com/3U092a1.jpg)
 
-有一個 v1 的分支，並且我在分支上增加一個 g.py 並且 commit。
+?��???v1 ?��??��?並�??�在?�支上�??��???g.py 並�? commit??
 
-接下來要 **第一次** git push 的時候， 你會發現有錯誤提示
+?��?來�? **第�?�?* git push ?��??��? 你�??�現?�錯誤�?�?
 
-請使用以下指令才是正確的
+請使?�以下�?令�??�正確�?
 
 ```cmd
 git push --set-upstream origin v1
 ```
 
-也可以使用
+也可以使??
 
 ```cmd
 git push -u origin v1
 ```
 
-更多詳細說明可參考 [https://git-scm.com/docs/git-push#git-push--u](https://git-scm.com/docs/git-push#git-push--u)
+?��?詳細說�??��???[https://git-scm.com/docs/git-push#git-push--u](https://git-scm.com/docs/git-push#git-push--u)
 
 ![alt tag](https://i.imgur.com/1fuS2VY.jpg)
 
-接下來你可以到網頁上看 ( 這裡用 bitbucket 當作範例 ) ，你會發現有分支 v1 了
+?��?來�??�以?�網?��???( ?�裡??bitbucket ?��?範�? ) ，�??�發?��??�支 v1 �?
 
 ![alt tag](https://i.imgur.com/lOtzsk8.jpg)
 
-如果是第一次使用 git clone ，你會發現你只有 master 分支 ，
+如�??�第一次使??git clone ，�??�發?��??��? master ?�支 �?
 
-這時候我們先查看遠端還有什麼分支，
+?��??��??��??��??�端?��?什麼�??��?
 
 ```cmd
 git branch -r
@@ -661,11 +661,11 @@ git branch -r
 git branch --remote
 ```
 
-`--remote` 或 `-r` 都可以.
+`--remote` ??`-r` ?�可�?
 
-假設遠端有一個名稱為 develop 的分支，
+?�設?�端?��??��?稱為 develop ?��??��?
 
-我們只要 checkout 到該分支底下就可以了
+?�們只�?checkout ?�該?�支底�?就可以�?
 
 ```cmd
 git checkout develop
@@ -673,29 +673,29 @@ git checkout develop
 
 ## git switch
 
-[Youtube Tutorial - git switch 和 git restore 教學](https://youtu.be/JL_bSOGDR-k)
+[Youtube Tutorial - git switch ??git restore ?�學](https://youtu.be/JL_bSOGDR-k)
 
-請先確認目前的 git 版本, 更新方法可參考 [git 更新](https://github.com/twtrubiks/Git-Tutorials#git-%E6%9B%B4%E6%96%B0).
+請�?確�??��???git ?�本, ?�新?��??��???[git ?�新](https://github.com/twtrubiks/Git-Tutorials#git-%E6%9B%B4%E6%96%B0).
 
-在 git 2.23 版本開始, 增加了 `git switch` 和 `git restore`, 這兩個指令主要是
+??git 2.23 ?�本?��?, 增�?�?`git switch` ??`git restore`, ?�兩?��?令主要是
 
-要更清楚的劃分功能, 主要是來代替 `git checkout`.
+要更清�??��??��??? 主�??��?�?�� `git checkout`.
 
-你其實可以想成 `git checkout` = `git switch` + `git restore`.
+你其實可以想??`git checkout` = `git switch` + `git restore`.
 
-官方文件可參考 [git-switch](https://git-scm.com/docs/git-switch)
+官方?�件?��???[git-switch](https://git-scm.com/docs/git-switch)
 
 ```cmd
 git switch [<options>] (-c|-C) <new-branch> [<start-point>]
 ```
 
-切換到一個已經存在的 branch (如果該 branch 不存在則指令無效)
+?��??��??�已經�??��? branch (如�?�?branch 不�??��??�令?��?)
 
 ```cmd
 git switch <new-branch>
 ```
 
-建立 new-branch 並且切換到 new-branch 分支
+建�? new-branch 並�??��???new-branch ?�支
 
 ```cmd
 git switch -c <new-branch>
@@ -705,14 +705,14 @@ git switch -c <new-branch>
 
 `-C` `--force-create`
 
-依照 commit_id (或前 N 的 commit 點) 建立 new-branch 並且切換到 new-branch 分支
+依照 commit_id (?��? N ??commit �? 建�? new-branch 並�??��???new-branch ?�支
 
 ```cmd
 git switch -c <new-branch> <commit_id>
 git switch -c <new-branch> HEAD~2
 ```
 
-(這邊教大家一個小技巧, 以下這個指令可以快速切換上一個分支, 和 `cd -` 概念一樣:smile:)
+(?��??�大家�??��??��? 以�??�個�?令可以快?��??��?一?��??? ??`cd -` 概念一�?smile:)
 
 ```cmd
 git switch -
@@ -720,38 +720,38 @@ git switch -
 
 ## git restore
 
-[Youtube Tutorial - git switch 和 git restore 教學](https://youtu.be/JL_bSOGDR-k)
+[Youtube Tutorial - git switch ??git restore ?�學](https://youtu.be/JL_bSOGDR-k)
 
-請先確認目前的 git 版本, 更新方法可參考 [git 更新](https://github.com/twtrubiks/Git-Tutorials#git-%E6%9B%B4%E6%96%B0).
+請�?確�??��???git ?�本, ?�新?��??��???[git ?�新](https://github.com/twtrubiks/Git-Tutorials#git-%E6%9B%B4%E6%96%B0).
 
-在 git 2.23 版本開始, 增加了 `git switch` 和 `git restore`, 這兩個指令主要是
+??git 2.23 ?�本?��?, 增�?�?`git switch` ??`git restore`, ?�兩?��?令主要是
 
-要更清楚的劃分功能, 主要是來代替 `git checkout`.
+要更清�??��??��??? 主�??��?�?�� `git checkout`.
 
-你其實可以想成 `git checkout` = `git switch` + `git restore`.
+你其實可以想??`git checkout` = `git switch` + `git restore`.
 
-官方文件可參考 [git-restore](https://git-scm.com/docs/git-restore)
+官方?�件?��???[git-restore](https://git-scm.com/docs/git-restore)
 
-以下兩個指令是相同的.
+以�??�個�?令是?��???
 
 ```cmd
 git checkout <file>
 git restore <file>
 ```
 
-還原目前資料夾全部的檔案
+?��??��?資�?夾全?��?檔�?
 
 ```cmd
 git restore .
 ```
 
-還原目前資料夾底下結尾是 `*.py` 的全部檔案
+?��??��?資�?夾�?下�?尾是 `*.py` ?�全?��?�?
 
 ```cmd
 git restore '*.py'
 ```
 
-如果你的 `git` 版本比較新, 你應該會發現這個指令你以前好像沒看過:smile:
+如�?你�? `git` ?�本比�??? 你�?該�??�現?�個�?令�?以�?好�?沒�???smile:
 
 ![alt tag](https://i.imgur.com/IHqfVrn.png)
 
@@ -761,32 +761,32 @@ git restore --staged <file>
 
 ## git pull
 
-通常在開始工作或要 push 之前，會先從遠端抓取分支，
+?�常?��?始工作�?�?push 之�?，�??��??�端?��??�支�?
 
 ```cmd
 git pull
 ```
 
-如果有衝突，要先解衝突。
+如�??��?突�?要�?�??突�?
 
-這邊補充一下 `-C` 這個參數的意思, 它的意思代表指定 folder 路徑,
+?��?補�?一�?`-C` ?�個�??��??��? 它�??�思代表�?�?folder 路�?,
 
-有時候我們可能不想先 `cd` 進去資料夾, 再進行 pull, 這時候,
+?��??��??�可?��??��? `cd` ?�去資�?�? ?�進�? pull, ?��???
 
-就很適合使用它:smile:
+就�??��?使用�?smile:
 
 ```cmd
 git [-C <path>] pull
 ```
 
-舉例,
+?��?,
 
 ```cmd
 cd git_folder
 git pull
 ```
 
-可以直接簡化為
+?�以?�接簡�???
 
 ```cmd
 git -C git_folder pull
@@ -794,39 +794,39 @@ git -C git_folder pull
 
 ## git fetch
 
-可以先簡單想成 **git pull = git fetch + git merge**
+?�以?�簡?�想??**git pull = git fetch + git merge**
 
-我們先來看下面這張圖，  **git fetch + git merge**
+?�們�?來�?下面?�張?��?  **git fetch + git merge**
 
 ![alt tag](https://i.imgur.com/COuWByw.png)
 
-再看這張圖  **git pull**
+?��??�張?? **git pull**
 
 ![alt tag](https://i.imgur.com/8FGuA75.png)
 
-這樣是不是清楚多了!!!
+?�樣?��??��?楚�?�?!!
 
-多補充一個參數 `--prune`,
+多�??��??��???`--prune`,
 
-* [Youtube Tutorial - git fetch 指令 prune 參數說明](https://youtu.be/ZMpMv1P1Q1Q)
+* [Youtube Tutorial - git fetch ?�令 prune ?�數說�?](https://youtu.be/ZMpMv1P1Q1Q)
 
-這個主要的功能是刪除 remote 無效的 branch,
+?�個主要�??�能?�刪??remote ?��???branch,
 
-有時候明明已經把遠端的 branch 刪除, 但是你執行 `git branch --remote`,
+?��??��??�已經�??�端??branch ?�除, 但是你執�?`git branch --remote`,
 
-卻會發現你還看的到那些 branch 的分支 (但明明網頁上的分支已經被移除了:sweat:)
+?��??�現你�??��??�那�?branch ?��???(但�??�網?��??��??�已經被移除�?sweat:)
 
-常常會發生在 pull 端(非工作端)的機器 (如果不懂這句話的意思建議看影片說明:smile:)
+常常?�發?�在 pull �??�工作端)?��???(如�?不�??�句話�??�思建議�?影�?說�?:smile:)
 
-這時候就可以同步一下本機和遠端的分支, 使用以下的指令
+?��??�就?�以?�步一下本機�??�端?��??? 使用以�??��?�?
 
 `git fetch --prune`
 
 ## git rebase
 
-什麼是 rebase 呢 ? git rebase 就是避免多餘 ( 沒有意義 ) 的 merge !!! 先看看下面兩張圖
+什麼是 rebase ??? git rebase 就是?��?多�? ( 沒�??�義 ) ??merge !!! ?��??��??�兩張�?
 
-補充 :
+補�? :
 
 ck = checkout
 
@@ -836,67 +836,67 @@ st = status
 
 cm = commit
 
-可以自行設定。
+?�以?��?設�???
 
-圖一
+?��?
 
 ![alt tag](https://i.imgur.com/mWY0f2J.png)
 
-圖二
+?��?
 
 ![alt tag](https://i.imgur.com/QVZc5P5.png)
 
-圖一 和 圖二 你喜歡看哪種圖 ?  答案很明顯，是 圖一 !!
+?��? ???��? 你�?歡�??�種???  答�?很�?顯�????��? !!
 
-**rebase** 的目的主要就是盡量讓圖都像 圖一
+**rebase** ?�目?�主要就?�盡?��??�都???��?
 
-用講的大家一定霧煞煞，所以我直接實戰給大家看。
+?��??�大家�?定霧?��?，�?以�??�接實戰給大家�???
 
-先示範 **沒有使用 rebase** 的範例
+?�示�?**沒�?使用 rebase** ?��?�?
 
-目前分支
+?��??�支
 
 ![alt tag](https://i.imgur.com/E0ahfnD.png)
 
 ![alt tag](https://i.imgur.com/Lb4dB0V.png)
 
-以上說明 : 先建立 v1 branch，接著 add 後再 commit。
+以�?說�? : ?�建�?v1 branch，接??add 後�? commit??
 
-假設現在又有人 push 了，以下模擬 pull ，自己加上一個 commit
+?�設?�在?��?�?push 了�?以�?模擬 pull ，自己�?上�???commit
 
 ![alt tag](https://i.imgur.com/hFKX4yJ.png)
 
-以上說明 : 自己在 master 分支上加 t2.txt ， 並且commit ( 模擬 pull )
+以�?說�? : ?�己??master ?�支上�? t2.txt �?並�?commit ( 模擬 pull )
 
-接下來，切換到 master 分支下和 v1 branch 分支 合併，並且 push
+?��?來�??��???master ?�支下�? v1 branch ?�支 ?�併，並�?push
 
 ![alt tag](https://i.imgur.com/0sCH2Q1.png)
 
-你會發現，顯示出來的圖並不漂亮，如下圖
+你�??�現，顯示出來�??�並不�?亮�?如�???
 
 ![alt tag](https://i.imgur.com/zbIPdyb.png)
 
-示範 **使用 rebase** 的範例
+示�? **使用 rebase** ?��?�?
 
-前面的部份基本上一樣
+?�面?�部份基?��?一�?
 
 ![alt tag](https://i.imgur.com/E0ahfnD.png)
 
 ![alt tag](https://i.imgur.com/Lb4dB0V.png)
 
-以上說明 : 先建立 v1 branch，接著 add 後再 commit。
+以�?說�? : ?�建�?v1 branch，接??add 後�? commit??
 
-假設現在又有人 push 了，以下模擬 pull ，自己加上一個 commit
+?�設?�在?��?�?push 了�?以�?模擬 pull ，自己�?上�???commit
 
 ![alt tag](https://i.imgur.com/hFKX4yJ.png)
 
-以上說明 : 自己在 master 分支上加 t2.txt ， 並且 commit ( 模擬 pull )
+以�?說�? : ?�己??master ?�支上�? t2.txt �?並�? commit ( 模擬 pull )
 
-***差異的部份***
+***差異?�部�?**
 
 ![alt tag](https://i.imgur.com/45ZXGiK.png)
 
-以上說明 : 先切換到 v1 分支，然後使用以下指令
+以�?說�? : ?��??�到 v1 ?�支，然後使?�以下�?�?
 
 ```cmd
 git rebase master
@@ -904,23 +904,23 @@ git rebase master
 
 ![alt tag](https://i.imgur.com/Lpd9Kjr.png)
 
-以上說明 : 再切回 master 分支，並且使用 merge 合併 v1 分支，最後在 push
+以�?說�? : ?��???master ?�支，並且使??merge ?�併 v1 ?�支，�?後在 push
 
-你看~  是不是變的整齊又漂亮多了呢?
+你�?~  ?��??��??�整齊�?漂亮多�???
 
 ![alt tag](https://i.imgur.com/1jBI7pw.png)
 
-git rebase  就是將 master 的最新 commit 接回來，再補上自己分支的 commit。
+git rebase  就是�?master ?��???commit ?��?來�??��?上自己�??��? commit??
 
-以上就是 git rebase  的介紹。
+以�?就是 git rebase  ?��?紹�?
 
 ## git rebase interactive
 
-小弟我當初年輕，一直以為 `git rebase` 就只是讓 commit log 看起來比較乾淨而已，結果無意間發現，
+小�??�當?�年輕�?一?�以??`git rebase` 就只?��? commit log ?�起來�?較乾淨而已，�??�無?��??�現�?
 
-`git rebase` 的 interactive 超強，所以，這邊就來介紹 `git rebase` 的強大功能 :smirk:
+`git rebase` ??interactive 超強，�?以�??��?就�?介紹 `git rebase` ?�強大�???:smirk:
 
-以下是 git rebase interactive 可以使用的指令，這些說明是我從 git 中複製出來的，等等會顯示給大家看，
+以�???git rebase interactive ?�以使用?��?令�??��?說�??��?�?git 中�?製出來�?，�?等�?顯示給大家�?�?
 
 ```cmd
 # Commands:
@@ -933,9 +933,9 @@ git rebase  就是將 master 的最新 commit 接回來，再補上自己分支�
 # d, drop = remove commit
 ```
 
-如果大家想要更進一步的了解，請參考 [INTERACTIVE MODE](https://git-scm.com/docs/git-rebase#_interactive_mode)，
+如�?大家?��??�進�?步�?了解，�??��?[INTERACTIVE MODE](https://git-scm.com/docs/git-rebase#_interactive_mode)�?
 
-pick 沒什麼好講的，就使用這個 commit 而已:smile:
+pick 沒�?麼好講�?，就使用?��?commit ?�已:smile:
 
 ### reword
 
@@ -947,33 +947,33 @@ pick 沒什麼好講的，就使用這個 commit 而已:smile:
 # r, reword = use commit, but edit the commit message
 ```
 
-以下為官方的說明
+以�??��??��?說�?
 
 ```txt
 If you just want to edit the commit message for a commit, replace the command "pick" with the command "reword".
 ```
 
-說明已經很清楚了，就是可以編輯 commit message。
+說�?已�?很�?楚�?，就?�可以編�?commit message??
 
-( 不能修改 commit 內容，也就是 files 內容 )
+( 不能修改 commit ?�容，�?就是 files ?�容 )
 
-假設，現在我們有一個 git log 是這樣，
+?�設，現?��??��?一??git log ?�這樣�?
 
 ![alt tag](https://i.imgur.com/6bWnJnK.png)
 
-commit id 2659f65 有 Typo，正確的 commit message 應該是  add c.py 才對，
+commit id 2659f65 ??Typo，正確�? commit message ?�該?? add c.py ?��?�?
 
-所以現在要修正他，我們的目標 commit id 為 2659f65，指令為
+?�以現?��?修正他�??�們�??��? commit id ??2659f65，�?令為
 
 ```cmd
 git rebase -i <after-this-commit>
 ```
 
-after-this-commit 這個是什麼意思:question:
+after-this-commit ?�個是什麼�???question:
 
-簡單說，就是要選當下的 commit id 的上一個，
+簡單說�?就是要選?��???commit id ?��?一?��?
 
-以這個例子來說，我們的目標 commit id 為 2659f65，但指令我們必須下
+以這個�?子�?說�??�們�??��? commit id ??2659f65，�??�令?�們�??��?
 
 ```cmd
 git rebase -i f0a761d
@@ -981,55 +981,55 @@ git rebase -i f0a761d
 
 ![alt tag](https://i.imgur.com/d15nGjx.png)
 
-這樣應該就很清楚了，總之，記得要選擇目標 commit id 的上一個就對了。
+?�樣?�該就�?清�?了�?總�?，�?得�??��??��? commit id ?��?一?�就對�???
 
-當你按下 ENTER 之後，你應該會看到下圖
+?��??��? ENTER 之�?，�??�該?��??��???
 
 ![alt tag](https://i.imgur.com/4ISGcW1.png)
 
-A 的部份就是我們要修改的目標，B 的部分就是說明 ( 前面貼給大家看的東西 )，
+A ?�部份就?��??��?修改?�目標�?B ?�部?�就?�說??( ?�面貼給大家?��??�西 )�?
 
-接著，按 i 進入編輯模式，然後將目標改成 r 或是 reword 都可以，接著輸入 `:wq`
+?��?，�? i ?�入編輯模�?，然後�??��??��? r ?�是 reword ?�可以�??��?輸入 `:wq`
 
 ![alt tag](https://i.imgur.com/zPeHuDa.png)
 
-接著我們再按下 ENTER，會再跳出一次畫面，這時候，你就將 commit 訊息修改成
+?��??�們�??��? ENTER，�??�跳?��?次畫?��??��??��?你就�?commit 訊息修改??
 
-正確的，將  add c.py Typo 修改為 add c.py
+�?��?��?�? add c.py Typo 修改??add c.py
 
 ![alt tag](https://i.imgur.com/brYbNqy.png)
 
-輸入 `:wq` 之後，再 ENTER ( 完成 )
+輸入 `:wq` 之�?，�? ENTER ( 完�? )
 
 ![alt tag](https://i.imgur.com/kitKqrm.png)
 
-我們再用 log 確認一下( 如下圖 )，的確修改成功了，成功將訊息修改為 add c.py，
+?�們�???log 確�?一�? 如�???)，�?確修?��??��?，�??��?訊息修改??add c.py�?
 
 ![alt tag](https://i.imgur.com/rWojGIu.png)
 
-這邊有個地方要和大家提一下，就是 commit id 會改變，我把改變的地方框出來給各位看，
+?��??�個地?��??�大家�?一下�?就是 commit id ?�改變�??��??��??�地?��??��?給�?位�?�?
 
-修改前
+修改??
 
 ![alt tag](https://i.imgur.com/6i6Wv35.png)
 
-修改後
+修改�?
 
 ![alt tag](https://i.imgur.com/mvj96U2.png)
 
-簡單來說，就是目前 commit id 之後的 commit id 都會改變 ( 有點繞口 :sweat_smile: )
+簡單來說，就?�目??commit id 之�???commit id ?��??��? ( ?��?繞口 :sweat_smile: )
 
-這邊補充一下，只要你用了 rebase，就會看到類似下面的圖，
+?��?補�?一下�??��?你用�?rebase，就?��??��?似�??��??��?
 
 ![alt tag](https://i.imgur.com/iiDf44q.png)
 
-origin/master 就是指遠端 ( romote ) 的 repo，它是和你說你現在的 repo 已經和 origin/master
+origin/master 就是?��?�?( romote ) ??repo，�??��?你說你現?��? repo 已�???origin/master
 
-不一樣了，所以，這時候你如果要 push，請使用 `git push --force-with-lease`。
+不�?�??，�?以�??��??��?如�?�?push，�?使用 `git push --force-with-lease`??
 
-這邊可能有人會問，如果我希望修改第一個 commit 該怎麼辦 :question:
+?��??�能?�人?��?，�??��?希�?修改第�???commit 該怎麼�?:question:
 
-這時候可以使用，
+?��??�可以使?��?
 
 ```cmd
 git rebase -i --root
@@ -1045,53 +1045,53 @@ git rebase -i --root
 # e, edit = use commit, but stop for amending
 ```
 
-以下為官方的說明
+以�??��??��?說�?
 
 ```txt
 By replacing the command "pick" with the command "edit", you can tell git rebase to stop after applying that commit, so that you can edit the files and/or the commit message, amend the commit, and continue rebasing.
 ```
 
-簡單說，reword 只可以修改 commit message，而 edit 不只可以修改 commit message ，還可以修改 files 內容。
+簡單說�?reword ?�可以修??commit message，�?edit 不只?�以修改 commit message ，�??�以修改 files ?�容??
 
-先來看看下面這張圖
+?��??��?下面?�張??
 
 ![alt tag](https://i.imgur.com/9j0JnKw.png)
 
-這圖很明顯 add a.py -> add b.py -> add c.py -> add d.py ，現在我想在 add c.py 和 add d.py 中再加一個東西，
+?��?很�?�?add a.py -> add b.py -> add c.py -> add d.py ，現?��??�在 add c.py ??add d.py 中�??��??�東西�?
 
-也就是變成 add a.py -> add b.py -> add c.py -> add c1.py -> add d.py  這樣。
+也就?��???add a.py -> add b.py -> add c.py -> add c1.py -> add d.py  ?�樣??
 
-增加一個  add c1.py 的情境時就可以使用 edit 了，( 以下我就不說那麼詳細了，我直接講重點 )，
+增�?一?? add c1.py ?��?境�?就可以使??edit 了�?( 以�??�就不說??��詳細了�??�直?��??��? )�?
 
-先執行以下指令 ( 我們的目標是 a7ed6ff ，所以選他的上一個 commit id，也就是 f0a761d )
+?�執行以下�?�?( ?�們�??��???a7ed6ff ，�?以選他�?上�???commit id，�?就是 f0a761d )
 
 ```cmd
 git rebase -i f0a761d
 ```
 
-這次我們將 pick 修改成 e 或是 edit ( 如下圖 )
+?�次?�們�? pick 修改??e ?�是 edit ( 如�???)
 
 ![alt tag](https://i.imgur.com/bKrLIl3.png)
 
-當你按下 ENTER 之後，你會看到下圖，
+?��??��? ENTER 之�?，�??��??��??��?
 
 ![alt tag](https://i.imgur.com/whkCzok.png)
 
-A 的部份是可以修改 commit message，
+A ?�部份是?�以修改 commit message�?
 
-B 的部份則是和你說當你修改 ( 滿足 ) 完畢，可以執行 `git rebase --continue`，
+B ?�部份�??��?你說?��?修改 ( 滿足 ) 完畢，可以執�?`git rebase --continue`�?
 
-A 的部份我們不做了，但我們現在來加工吧 ( 增加 c1.py )，
+A ?�部份�??��??��?，�??�們現?��??�工??( 增�? c1.py )�?
 
-首先，我們建立一個 c1.py 檔案，然後 `git add c1.py`，接著 commit 他 ( 如下圖 )
+首�?，�??�建立�???c1.py 檔�?，然�?`git add c1.py`，接??commit �?( 如�???)
 
 ![alt tag](https://i.imgur.com/frYBUfT.png)
 
-剛剛有說過了，當你滿足時，可執行 `git rebase --continue`，收工
+?��??�說?��?，當你滿足�?，可?��? `git rebase --continue`，收�?
 
 ![alt tag](https://i.imgur.com/sjnEn0H.png)
 
-再用 log 確認一下，太神了 :satisfied: 成功加上去了
+?�用 log 確�?一下�?太�?�?:satisfied: ?��??��??��?
 
 ![alt tag](https://i.imgur.com/irECwLH.png)
 
@@ -1105,51 +1105,51 @@ A 的部份我們不做了，但我們現在來加工吧 ( 增加 c1.py )，
 # s, squash = use commit, but meld into previous commit
 ```
 
-以下為官方的說明
+以�??��??��?說�?
 
 ```text
  The suggested commit message for the folded commit is the concatenation of the commit messages of the first commit and of those with the "squash" command,
 ```
 
-簡單說，你如果想要將多個 commit 合併成一個，使用 squash 就對了，( 以下我就不說那麼詳細了，我直接講重點 )，
+簡單說�?你�??�想要�?多�?commit ?�併?��??��?使用 squash 就�?了�?( 以�??�就不說??��詳細了�??�直?��??��? )�?
 
-這次的目標是要將 commit id fc45824 以及 commit id a7ed6ff 合併起來 ( 如下圖 )
+?�次?�目標是要�? commit id fc45824 以�? commit id a7ed6ff ?�併起�? ( 如�???)
 
 ![alt tag](https://i.imgur.com/v8XwOTN.png)
 
-先執行以下指令
+?�執行以下�?�?
 
 ```cmd
 git rebase -i f0a761d
 ```
 
-接著你會看到下圖，我們將 fc45824 這個 cmmit 的 pick 修改成 s 或 squash
+?��?你�??�到下�?，�??��? fc45824 ?��?cmmit ??pick 修改??s ??squash
 
-( 他會合併他的前一個，也就是 a7ed6ff )
+( 他�??�併他�??��??��?也就??a7ed6ff )
 
 ![alt tag](https://i.imgur.com/rgWkvVp.png)
 
-( 如果你要合併多個 commit，就多個都改成 s 或 squash, 注意, 有順序性:exclamation::exclamation: )
+( 如�?你�??�併多�?commit，就多個都?��? s ??squash, 注�?, ?��?序�?exclamation::exclamation: )
 
-將著按下 ENTER，會看到下圖
+將�??��? ENTER，�??�到下�?
 
 ![alt tag](https://i.imgur.com/pB6yllA.png)
 
-這時候他已經合併了這兩個 commit，我們就可以輸入新的 commit message，
+?��??��?已�??�併了這兩??commit，�??�就?�以輸入?��? commit message�?
 
-這邊我們輸入 add c.py and c1.py
+?��??�們輸??add c.py and c1.py
 
 ![alt tag](https://i.imgur.com/m9E6KUp.png)
 
-再按 ENTER ( 成功 )
+?��? ENTER ( ?��? )
 
 ![alt tag](https://i.imgur.com/X0O7I5H.png)
 
-可以再用 log 確認一下，我們成功將兩個 commit 合併了
+?�以?�用 log 確�?一下�??�們�??��??��?commit ?�併�?
 
 ![alt tag](https://i.imgur.com/r53KIev.png)
 
-c.py 以及 c1.py 都存在，代表我們成功了:satisfied:
+c.py 以�? c1.py ?��??��?�?��?�們�??��?:satisfied:
 
 ![alt tag](https://i.imgur.com/WhkLDGa.png)
 
@@ -1163,49 +1163,49 @@ c.py 以及 c1.py 都存在，代表我們成功了:satisfied:
 # f, fixup = like "squash", but discard this commit's log message
 ```
 
-以下為官方的說明
+以�??��??��?說�?
 
 ```text
 omits the commit messages of commits with the "fixup" command.
 ```
 
-其實這個和 squash 很像，通常如果我們要忽略一個 commit message 但保留 commit 的內容，我們就會使用 fixup，
+?�實?�個�? squash 很�?，通常如�??�們�?忽略一??commit message 但�???commit ?�內容�??�們就?�使??fixup�?
 
-目標，這邊我們想要移除 fc45824 的個 commit ( 但保留 commit 的內容 )
+?��?，這�??�們想要移??fc45824 ?��?commit ( 但�???commit ?�內�?)
 
 ![alt tag](https://i.imgur.com/AFrd0UA.png)
 
-先執行以下指令
+?�執行以下�?�?
 
 ```cmd
 git rebase -i f0a761d
 ```
 
-將 fc45824 的 pick 修改成 f 或 fixup ( 如下圖 )
+�?fc45824 ??pick 修改??f ??fixup ( 如�???)
 
-( 他會移除 fc45824 這個 commit message ，但保留 commit 的內容 )
+( 他�?移除 fc45824 ?��?commit message ，�?保�? commit ?�內�?)
 
 ![alt tag](https://i.imgur.com/aDH1y1n.png)
 
-接著 ENTER，成功 rebase
+?��? ENTER，�???rebase
 
 ![alt tag](https://i.imgur.com/BMs2h8r.png)
 
-可以再用 log 確認一下，我們忽略了 add c1.py 這個 commit
+?�以?�用 log 確�?一下�??�們忽?��? add c1.py ?��?commit
 
 ![alt tag](https://i.imgur.com/bgYJa6T.png)
 
-但是 c.py 以及 c1.py 都存在 ( 只忽略 commit message )，
+但是 c.py 以�? c1.py ?��???( ?�忽??commit message )�?
 
 ![alt tag](https://i.imgur.com/tYrB3F9.png)
 
-看到這裡，大家其實可以想一想 squash 和 fixup 真的非常類似，
+?�到?�裡，大家其實可以想一??squash ??fixup ?��??�常類似�?
 
-只不過 squash 可以修改 commit message。
+?��???squash ?�以修改 commit message??
 
-簡單一點，單純想要忽略某一個 commit message 時，使用 fixup，
+簡單一點�??��??��?忽略?��???commit message ?��?使用 fixup�?
 
-想要合併 commit 並修改 commit message 時，使用 squash。
+?��??�併 commit 並修??commit message ?��?使用 squash??
 
 ### exec
 
@@ -1217,45 +1217,45 @@ git rebase -i f0a761d
 # x, exec = run command (the rest of the line) using shell
 ```
 
-以下為官方的說明
+以�??��??��?說�?
 
 ```text
 You may want to check that your history editing did not break anything by running a test, or at least recompiling at intermediate points in history by using the "exec" command (shortcut "x")
 ```
 
-這個功能我比較少用，但還是說一下，簡單說，就是他可以用來 check 你的
+?�個�??��?比�?少用，�??�是說�?下�?簡單說�?就是他可以用�?check 你�?
 
-rebase 改動是不是影響到整體 ( 用 exec command 確認 )。
+rebase ?��??��??�影?�到?��? ( ??exec command 確�? )??
 
-聽不太懂 :question: 沒關係，假如我今天做了一大堆的 rabase 更動，但我想確認我這樣做了之後，
+?��?太�? :question: 沒�?係�??��??��?天�?了�?大�???rabase ?��?，�??�想確�??�這樣?��?之�?�?
 
-對整體是不是有影響，也就是可以在更動時，順便跑你的 test 去確認整體是正常 work。
+對整體是不是?�影?��?也就?�可以在?��??��??�便跑�???test ?�確認整體是�?�� work??
 
-還是聽不懂 :question: 也沒關係，我用一個範例給大家看
+?�是?��???:question: 也�??��?，�??��??��?例給大家??
 
 ![alt tag](https://i.imgur.com/iu1bEOw.png)
 
-如上圖，假如我想要在我更動中做一些 test 去確保我的更動不會影響整體，
+如�??��??��??�想要在?�更?�中?��?�?test ?�確保�??�更?��??�影?�整體�?
 
-( 雖然這邊都是 pick，也就是沒改動，但方便說明，大家請自行想像有改動:sweat_smile: )
+( ?�然?��??�是 pick，�?就是沒改?��?但方便說?��?大家請自行想?��??��?:sweat_smile: )
 
 ![alt tag](https://i.imgur.com/2c9ycmS.png)
 
-A 的部份 echo "test sucess" 這個自然不用有問題，
+A ?�部�?echo "test sucess" ?�個自?��??��??��?�?
 
-但是 B 的部分就會出問題，因為根本沒有 error 這個指令，
+但是 B ?�部?�就?�出?��?，�??�根?��???error ?�個�?令�?
 
-當如果執行到 shell 有錯誤時，他會停下來，讓你修正，
+?��??�執行到 shell ?�錯誤�?，�??��?下�?，�?你修�??
 
-如下圖，我們停在了 add c.py 這個 commit 上，因為接下來得 test error 了
+如�??��??�們�??��? add c.py ?��?commit 上�??�為?��?來�? test error �?
 
 ![alt tag](https://i.imgur.com/yVB3naC.png)
 
-這時候我們可以修正問題，修正完了之後，再執行 `git rebase --continue`。
+?��??��??�可以修�??題�?修正完�?之�?，�??��? `git rebase --continue`??
 
 ![alt tag](https://i.imgur.com/YBD0d9V.png)
 
-這個功能我想應該是讓你去邊修改邊跑你自己的 test，確保改動都正常。
+?�個�??��??��?該是讓�??��?修改?��?你自己�? test，確保改?�都�?��??
 
 ### drop
 
@@ -1267,315 +1267,315 @@ A 的部份 echo "test sucess" 這個自然不用有問題，
 # d, drop = remove commit
 ```
 
-以下為官方的說明
+以�??��??��?說�?
 
 ```text
 To drop a commit, replace the command "pick" with "drop", or just delete the matching line.
 ```
 
-這個就簡單多了，移除這個 commit ( 包含 commit 內容 )，
+?�個就簡單多�?，移?�這�?commit ( ?�含 commit ?�容 )�?
 
-假設我們的 log 如下，
+?�設?�們�? log 如�?�?
 
 ![alt tag](https://i.imgur.com/zz5arVp.png)
 
-這次的目標是移除 f0a761d 和 980bd9a 和 1539219 這些 commit，
+?�次?�目標是移除 f0a761d ??980bd9a ??1539219 ?��? commit�?
 
-先執行以下指令
+?�執行以下�?�?
 
 ```cmd
 git rebase -i 8f13aaa
 ```
 
-將 pick 修改成 d 或 drop ( 如下圖 )
+�?pick 修改??d ??drop ( 如�???)
 
 ![alt tag](https://i.imgur.com/Goc1LH1.png)
 
-按 ENTER 之後，再用 log 確認一下，
+??ENTER 之�?，�???log 確�?一下�?
 
 ![alt tag](https://i.imgur.com/u7z2Y3U.png)
 
-從上圖可以發現，我們已經成功的移除 f0a761d 和 980bd9a 和 1539219 這些 commit，
+從�??�可以發?��??�們已經�??��?移除 f0a761d ??980bd9a ??1539219 ?��? commit�?
 
-並且也看到 commit 內容也都被移除了，只剩下 a.py 而已。
+並�?也�???commit ?�容也都被移?��?，只?��? a.py ?�已??
 
-## git pull 補充
+## git pull 補�?
 
-既然介紹完了 `git fetch` 以及 `git rebase` 之後，接下來我要再補充一些 `git pull` 額外的 options 參數
+?�然介紹完�? `git fetch` 以�? `git rebase` 之�?，接下�??��??��??��?�?`git pull` 額�???options ?�數
 
 ```cmd
-git pull [<options>] [<repository> [<refspec>…​]]
+git pull [<options>] [<repository> [<refspec>?�​]]
 ```
 
-更多詳細指令可參考 [https://git-scm.com/docs/git-pull#_options](https://git-scm.com/docs/git-pull#_options)。
+?��?詳細?�令?��???[https://git-scm.com/docs/git-pull#_options](https://git-scm.com/docs/git-pull#_options)??
 
-這裡簡單整理一下，
+?�裡簡單?��?一下�?
 
 ```cmd
 git pull = git fetch + git merge
 git pull --rebase = git fetch + git rebase
 ```
 
-在 [git-rebase](https://github.com/twtrubiks/Git-Tutorials#git-rebase) 中已經讓大家了解到使用 git-rebase 可以讓 code review 的人
+??[git-rebase](https://github.com/twtrubiks/Git-Tutorials#git-rebase) 中已經�?大家了解?�使??git-rebase ?�以�?code review ?�人
 
-看起來比較舒服，所以就使用 `git pull --rebase` 吧 ( 前提是你要知道你在幹嘛 :smile: )。
+?�起來�?較�??��??�以就使用 `git pull --rebase` ??( ?��??��?要知?��??�幹??:smile: )??
 
-這邊我模擬 `git pull` 以及 `git pull --rebase` 的差異，順便加上衝突的情況，因為步驟蠻多的，
+?��??�模??`git pull` 以�? `git pull --rebase` ?�差?��??�便?��?衝�??��?況�??�為步�??��??��?
 
-所以如果你想了解更多他的概念，請參考以下手把手教學，
+?�以�??��??��?�?��多�??��?念�?請�??�以下�??��??�學�?
 
 [Youtube Tutorial - git pull vs git pull --rebase](https://youtu.be/8h0K-2OaeSk)
 
-使用 `git pull` 後的結果，code review 的人一定翻桌 ( 如下圖 ):triumph:
+使用 `git pull` 後�?結�?，code review ?�人一定翻�?( 如�???):triumph:
 
-這邊我有順便模擬衝突的時候，你會發現如果使用 `git pull` 會多一個 commit (也就是下方的 "fix conflict")。
+?��??��??�便模擬衝�??��??��?你�??�現如�?使用 `git pull` ?��?一??commit (也就?��??��? "fix conflict")??
 
 ![alt tag](https://i.imgur.com/CNgKR3y.png)
 
-使用 `git pull --rebase` 後的結果，code review 的人表示溫馨  ( 如下圖 ):innocent:
+使用 `git pull --rebase` 後�?結�?，code review ?�人表示溫馨  ( 如�???):innocent:
 
-這邊我有順便模擬衝突的時候，你會發現如果使用 `git pull --rebase` 並不會像剛剛一樣多了一個 commit，
+?��??��??�便模擬衝�??��??��?你�??�現如�?使用 `git pull --rebase` 並�??��??��?一�??了�???commit�?
 
-原因是因為當我們使用 `git pull --rebase` 造成衝突時，修好衝突的內容之後，git add xxxx，接著我們會
+?��??��??�當?�們使??`git pull --rebase` ?��?衝�??��?修好衝�??�內容�?後�?git add xxxx，接?��??��?
 
-直接執行 `git rebase --continue`。
+?�接?��? `git rebase --continue`??
 
 ![alt tag](https://i.imgur.com/RKMo9ue.png)
 
-假設今天你執行了 `git pull --rebase` 之後，發現很難受 :fearful:，想要取消，
+?�設今天你執行�? `git pull --rebase` 之�?，發?��???? :fearful:，想要�?消�?
 
-直接執行 `git rebase --abort` 即可回到之前的狀態。
+?�接?��? `git rebase --abort` ?�可?�到之�??��??��?
 
-額外補充小技巧,
+額�?補�?小�?�?
 
-* [Youtube Tutorial - git autostash 參數說明](https://youtu.be/kg2PyZr7l5k)
+* [Youtube Tutorial - git autostash ?�數說�?](https://youtu.be/kg2PyZr7l5k)
 
-說明 `--autostash`,
+說�? `--autostash`,
 
-一般來說, 如果我們工作到一半, 突然想要直接 `git pull --rebase`, 又不想 commit,
+一?��?�? 如�??�們工作到一?? 突然?��??�接 `git pull --rebase`, ?��???commit,
 
-流程大約會像下面這樣
+流�?大�??��?下面?�樣
 
 ```cmd
-git stash # 將目前的改動存進去 stash 中
+git stash # 將目?��??��?存進去 stash �?
 git pull --rebase
-git stash pop # 將之前的改動從 stash 中 pop 出來
-# 如果有衝突再去解決衝突
+git stash pop # 將�??��??��?�?stash �?pop ?��?
+# 如�??��?突�??�解決�?�?
 ```
 
-但如果每次都要執行這麼多指令其實會有點煩:sweat:
+但�??��?次都要執行這麼多�?令其實�??��???sweat:
 
-但可以透過一個參數來解決, 也就是
+但可以透�?一?��??��?�?��, 也就??
 
 `git pull --rebase --autostash`
 
-以上這段指令基本上就是幫你執行了剛剛上面那一串的東西,
+以�??�段?�令?�本上就?�幫你執行�??��?上面???串�??�西,
 
-如果有衝突, 就再修正衝突即可:smile:
+如�??��?�? 就�?修正衝�??�可:smile:
 
 ## git-cherry-pick
 
-看影片會更清楚，手把手帶大家動手做 [Youtube Tutorial - git-cherry-pick](https://youtu.be/x3UtKUvlDdI)
+?�影?��??��?楚�??��??�帶大家?��???[Youtube Tutorial - git-cherry-pick](https://youtu.be/x3UtKUvlDdI)
 
-git-cherry-pick 這個指令大家可能會比較陌生:confused:
+git-cherry-pick ?�個�?令大家可?��?比�??��?:confused:
 
-沒關係，我們先來看 [官方](https://git-scm.com/docs/git-cherry-pick) 的說明
+沒�?係�??�們�?來�? [官方](https://git-scm.com/docs/git-cherry-pick) ?�說??
 
 ```text
 git-cherry-pick - Apply the changes introduced by some existing commits
 ```
 
-看完官方說明還是:question::question::question:
+?��?官方說�??�是:question::question::question:
 
-沒關係，我來假設一個情境 ( 理解完它你就了解了 git-cherry-pick 的用途了 )，
+沒�?係�??��??�設一?��?�?( ?�解完�?你就了解�?git-cherry-pick ?�用?��? )�?
 
-假設現在 master 分支的 log 如下圖
+?�設?�在 master ?�支??log 如�???
 
 ![alt tag](https://i.imgur.com/cMcn6yE.png)
 
-然後有一個 v1 的分支 log 如下圖
+?��??��???v1 ?��???log 如�???
 
 ![alt tag](https://i.imgur.com/OZ7JLke.png)
 
-現在我希望 merge v1 分支中的 14dee93 - add d.py 這個 commit
+?�在?��???merge v1 ?�支中�? 14dee93 - add d.py ?��?commit
 
-( 因為 14dee93 這個 commit 實在太棒了或是因為某些原因只需要這個 commit )
+( ?�為 14dee93 ?��?commit 實在太�?了�??��??��?些�??�只?�要這�?commit )
 
-遇到上述這種情況，就很適合使用 git-cherry-pick，也就是說我想要其他分支中的某幾個 commit 而已，
+?�到上述?�種?��?，就很適?�使??git-cherry-pick，�?就是說�??��??��??�支中�??�幾??commit ?�已�?
 
-不需要全部，換句話說，就是撿其他分支中的 commit 過來使用。
+不�?要全?��??�句話說，就?�撿?��??�支中�? commit ?��?使用??
 
-了解了適合的使用情境，接下來我們就來實戰:smirk:
+了解了適?��?使用?��?，接下�??�們就來實??smirk:
 
-首先，我想要 v1 分支中的 14dee93 - add d.py 這個 commit，
+首�?，�??��? v1 ?�支中�? 14dee93 - add d.py ?��?commit�?
 
-所以我先切到 master 分支，接著執行
+?�以�??��???master ?�支，接?�執�?
 
 ```cmd
 git cherry-pick 14dee93
 ```
 
-如果你想要一次撿很多的分支過來也是可以，直接使用空白隔開即可
+如�?你想要�?次撿很�??��??��?來�??�可以�??�接使用空白?��??�可
 
 ```cmd
 git cherry-pick 14dee93 xxxxxx xxxxxx xxxxxx xxxxx
 ```
 
-如果沒有衝突，就會看到如下圖
+如�?沒�?衝�?，就?��??��?下�?
 
 ![alt tag](https://i.imgur.com/YITXxMk.png)
 
-再觀看一下 master 的 log
+?��??��?�?master ??log
 
 ![alt tag](https://i.imgur.com/iGEIDZL.png)
 
-你會發現我們成功把 v1 分支中的 14dee93 - add d.py 這個 commit 拿過來
+你�??�現?�們�??��? v1 ?�支中�? 14dee93 - add d.py ?��?commit ?��?�?
 
-使用了，但現在它的 commit id 卻是 ab70429，這個是正常的，因為它需要
+使用了�?但現?��???commit id ?�是 ab70429，這個是�?��?��??�為它�?�?
 
-重新新計算:smile:
+?�新?��?�?smile:
 
-其實，你會發現 git-cherry-pick 沒有想像中的困難:satisfied:
+?�實，�??�發??git-cherry-pick 沒�??��?中�??�難:satisfied:
 
-在 cherry-pick 時，難免會遇到衝突，這邊我就再多做一個衝突的範例，
+??cherry-pick ?��?????��??��?突�??��??�就?��??��??��?突�?範�?�?
 
-假設 master 的 log 如下
+?�設 master ??log 如�?
 
 ![alt tag](https://i.imgur.com/pttbQ5U.png)
 
-v1 分支中的 log 如下，我想要它的 3a2f29a - add c.py and print world 這個 commit
+v1 ?�支中�? log 如�?，�??��?它�? 3a2f29a - add c.py and print world ?��?commit
 
 ![alt tag](https://i.imgur.com/RFibHS6.png)
 
-v2 分支中的 log 如下，我想要它的  553587b - add f.py這個 commit
+v2 ?�支中�? log 如�?，�??��?它�?  553587b - add f.py?��?commit
 
 ![alt tag](https://i.imgur.com/I6L2Fwq.png)
 
-接下來我們就切回 master，然後 cherry-pick 這兩個 commit，
+?��?來�??�就?��? master，然�?cherry-pick ?�兩??commit�?
 
-這時候你會發現，它衝突了:fearful:
+?��??��??�發?��?它�?突�?:fearful:
 
 ![alt tag](https://i.imgur.com/fAtQET0.png)
 
-使用 `git status` 看一下狀態，其實 A 的部分都教你如何解衝突了
+使用 `git status` ?��?下�??��??�實 A ?�部?�都?��?如�?�??突�?
 
 ![alt tag](https://i.imgur.com/J8ZpPng.png)
 
-首先，我們先將 c.py 修正後，執行 `git add c.py`，接著再按照 A 的部份
+首�?，�??��?�?c.py 修正後�??��? `git add c.py`，接?��??�照 A ?�部�?
 
-執行 `git cherry-pick --continue`，就時候會跳出一個編輯視窗，
+?��? `git cherry-pick --continue`，就?�候�?跳出一?�編輯�?窗�?
 
 ![alt tag](https://i.imgur.com/giylVAL.png)
 
-輸入完 commit message 之後，再輸入 `wq`，就會看到下圖
+輸入�?commit message 之�?，�?輸入 `wq`，就?��??��???
 
 ![alt tag](https://i.imgur.com/rA8wMbO.png)
 
-最後，再觀看 log，
+?�後�??��???log�?
 
 ![alt tag](https://i.imgur.com/lEP648c.png)
 
-我們成功將我們要的 commit merge 到我們的 master 分支上了:kissing_smiling_eyes:
+?�們�??��??�們�???commit merge ?��??��? master ?�支上�?:kissing_smiling_eyes:
 
-想了解更多的使用方法，可參考官方文件
-[https://git-scm.com/docs/git-cherry-pick](https://git-scm.com/docs/git-cherry-pick)。
+?��?�?��多�?使用?��?，可?�考�??��?�?
+[https://git-scm.com/docs/git-cherry-pick](https://git-scm.com/docs/git-cherry-pick)??
 
 ## git revert
 
-假設我 commit history 為 A1 -> A2 -> A3 -> A4 -> A5 -> A6
+?�設??commit history ??A1 -> A2 -> A3 -> A4 -> A5 -> A6
 
-我現在想要回 A4 這個 commit , 這時候我就可以使用 git revert ！！
+?�現?�想要�? A4 ?��?commit , ?��??��?就可以使??git revert ！�?
 
-先 revert A6
+??revert A6
 
 ```cmd
 git revert A6
 ```
 
-再 revert A5
+??revert A5
 
 ```cmd
 git revert A5
 ```
 
-假如你再看現在的 commit history , 他會長的像這樣
+?��?你�??�現?��? commit history , 他�??��??�這樣
 
 A1 -> A2 -> A3 -> A4 -> A5 -> A6 -> A6_revert -> A5_revert
 
-這時候，其實你的 commit 就是在 A4 這個位置 。
+?��??��??�實你�? commit 就是??A4 ?�個�?�???
 
-使用 git revert 的好處，就是可以保留 commit history, 萬一你又後悔了，
+使用 git revert ?�好?��?就是?�以保�? commit history, ?��?你�?後�?了�?
 
-也可以在 revert 回去。
+也可以在 revert ?�去??
 
-如果你想要 revert 最新的 commit, 只需要使用 HEAD
+如�?你想�?revert ?�?��? commit, ?��?要使??HEAD
 
 ```cmd
 git revert HEAD
 ```
 
-## 解決衝突
+## �?��衝�?
 
-在進行合併的時候，有時候會顯示出 **衝突conflicts** ，這時候就必須手動解決衝突後再送出。
+?�進�??�併?��??��??��??��?顯示??**衝�?conflicts** ，這�??�就必�??��?�?��衝�?後�??�出??
 
-通常我目前最容易遇到衝突 conflicts ，就是使用 pull 這個指令的時候
+?�常?�目?��?容�??�到衝�? conflicts ，就?�使??pull ?�個�?令�??��?
 
 ![alt tag](https://i.imgur.com/Eph0Vw1.jpg)
 
-仔細看這張圖，如果使用**pull**這個指令，會幫你 **自動 merge** ( 如圖裡的 Auto-merging Hello.py )，
+仔細?�這張?��?如�?使用**pull**?�個�?令�??�幫�?**?��? merge** ( 如�?裡�? Auto-merging Hello.py )�?
 
-然後接著看 CONFLICT ( content ) : Merge conflict in Hello.py ，又說 Automatic merge failed，
+?��??��???CONFLICT ( content ) : Merge conflict in Hello.py ，�?�?Automatic merge failed�?
 
-就是告訴你， Hello.py 這個檔案有衝突，然後你必須手動下去解決衝突。
+就是?�訴你�? Hello.py ?�個�?案�?衝�?，然後�?必�??��?下去�?��衝�???
 
-git status 可以告訴我們衝突的文件。
+git status ?�以?�訴?�們�?突�??�件??
 
 ![alt tag](https://i.imgur.com/vlVcXn8.jpg)
 
-打開衝突文件我們會看到 Git 用 <<<<<<<，=======，>>>>>>> 標記出不同分支的內容，我們修改完畢後再提交：
+?��?衝�??�件?�們�??�到 Git ??<<<<<<<�?======�?>>>>>> 標�??��??��??��??�容，�??�修?��??��??��?交�?
 
 ![alt tag](https://i.imgur.com/rlPOaxn.jpg)
 
-通常我們會手動下去修改衝突 conflicts，然後再加個 commit
+?�常?�們�??��?下去修改衝�? conflicts，然後�??��?commit
 
 ```cmd
 git add Hello.py
 git commit -m "conflict fixed"
 ```
 
-### 假設今天我們想要放棄這個 merge 我們該怎麼做呢 ？
+### ?�設今天?�們想要放棄這�?merge ?�們該?�麼?�呢 �?
 
 ```cmd
 git merge --abort
 ```
 
-或
+??
 
 ```cmd
 git reset --hard HEAD
 ```
 
-可以取消這次的 merge 回到 merge 前。
+?�以?��??�次??merge ?�到 merge ?��?
 
-## git stash 指令
+## git stash ?�令
 
-* [Youtube Tutorial - git stash 指令](https://youtu.be/CN065MNHtMY)
+* [Youtube Tutorial - git stash ?�令](https://youtu.be/CN065MNHtMY)
 
-很多時候，我們正在開發一個新功能又或是 debug，然後突然有一個功能需要緊急修正，
+很�??�候�??�們正?��??��??�新?�能?��???debug，然後�??��?一?��??��?要�??�修�??
 
-但你又不想 commit 現在的狀況，因為根本沒意義，事情只做了一半，這時候 **stash**
+但�??��???commit ?�在?��?況�??�為?�本沒�?義�?事�??��?了�??��??��???**stash**
 
-這個實用的指令就派上用場了。
+?�個實?��??�令就派上用?��???
 
-舉個例子，假設我們改了 A.py 和 B.py 這兩個檔案
+?�個�?子�??�設?�們改�?A.py ??B.py ?�兩?��?�?
 
 ![alt tag](https://i.imgur.com/7xX0T1T.jpg)
 
-然後，現在突然有一個 bug 必須馬上(立刻)處理，
+?��?，現?��??��?一??bug 必�?馬�?(立刻)?��?�?
 
-但是，啊我手上的事情還沒做完阿~~~~
+但是，�??��?上�?事�??��??��??�~~~~
 
-這時候，可以利用以下指令
+?��??��??�以?�用以�??�令
 
 ```cmd
 git stash
@@ -1583,20 +1583,20 @@ git stash
 
 ![alt tag](https://i.imgur.com/cYCH8mV.jpg)
 
-假如你想要更清楚自己這次的 stash 原因是什麼，或是這是正在開發什麼功能
-可以使用以下指令
+?��?你想要更清�??�己?�次??stash ?��??��?麼�??�是?�是�?��?�發什麼�???
+?�以使用以�??�令
 
-範例
+範�?
 
 ```cmd
-git stash save "我是註解"
+git stash save "?�是註解"
 ```
 
 ```cmd
 git stash save -u "feature"
 ```
 
-參數說明
+?�數說�?
 
 `-u` | `--include-untracked`
 
@@ -1604,11 +1604,11 @@ git stash save -u "feature"
 
 ![alt tag](https://i.imgur.com/nGS11Px.jpg)
 
-接下來你可以使用 status 指令，你會發現變乾淨了
+?��?來�??�以使用 status ?�令，�??�發?��?乾淨�?
 
 ![alt tag](https://i.imgur.com/Xf53GfM.jpg)
 
-並且可以使用下列的指令來觀看 stash 裡面的東西
+並�??�以使用下�??��?令�?觀??stash 裡面?�東�?
 
 ```cmd
 git stash list
@@ -1616,14 +1616,14 @@ git stash list
 
 ![alt tag](https://i.imgur.com/jQPiYiX.jpg)
 
-然後你很努力地解決這個 bug，commit 完之後，
-可以再使用下列的指令把 stash 取回來，這指令取回後也會刪除 stash
+?��?你�??��??�解決這�?bug，commit 完�?後�?
+?�以?�使?��??��??�令??stash ?��?來�??��?令�??��?也�??�除 stash
 
 ```cmd
 git stash pop
 ```
 
-假設今天你有很多的 stash，你可以指定，如下 (選自己喜歡的用法)
+?�設今天你�?很�???stash，�??�以?��?，�?�?(?�自己�?歡�??��?)
 
 ```cmd
 git stash pop 0
@@ -1632,29 +1632,29 @@ git stash pop stash@{0}
 
 ![alt tag](https://i.imgur.com/zVF7no2.jpg)
 
-你會發現剛剛的東西回來了~
+你�??�現?��??�東西�?來�?~
 
-如果你希望使用 stash 取回之後，不希望刪除 stash ，可以使用下列的指令
+如�?你�??�使??stash ?��?之�?，�?希�??�除 stash ，可以使?��??��??�令
 
 ```cmd
 git stash apply
 ```
 
-如下圖，你可以發現取回後， stash 並沒有被刪除
+如�??��?你可以發?��??��?�?stash 並�??�被?�除
 
 ![alt tag](https://i.imgur.com/w3Ip3iW.jpg)
 
-如果你只是想要刪除暫存，可以使用下列的指令
+如�?你只?�想要刪?�暫存�??�以使用下�??��?�?
 
 ```cmd
 git stash clear
 ```
 
-從下圖可以發現，stash 裡面的東西被我們刪除了
+從�??�可以發?��?stash 裡面?�東西被?�們刪?��?
 
 ![alt tag](https://i.imgur.com/PvzufbQ.jpg)
 
-如果你想丟棄指定的 stash，可以使用 (選自己喜歡的用法)
+如�?你想丟�??��???stash，可以使??(?�自己�?歡�??��?)
 
 ```cmd
 git stash drop 0
@@ -1663,9 +1663,9 @@ git stash drop stash@{0}
 
 ## git tag
 
-[Youtube Tutorial - git tag 教學](https://youtu.be/azciLlpr3Gs)
+[Youtube Tutorial - git tag ?�學](https://youtu.be/azciLlpr3Gs)
 
-查看 tag
+?��? tag
 
 ```cmd
 git tag
@@ -1673,7 +1673,7 @@ git tag
 
 ![alt tag](https://i.imgur.com/8f6zGfm.png)
 
-指定關鍵字
+?��??�鍵�?
 
 ```cmd
 git tag -l "v1.*"
@@ -1681,19 +1681,19 @@ git tag -l "v1.*"
 
 `-l` `--list`
 
-git tag 有 輕量級標籤(lightweight tag) 和 附註標籤(annotated tag).
+git tag ??輕�?級�?�?lightweight tag) ???�註標籤(annotated tag).
 
-輕量級標籤(lightweight tag)
+輕�?級�?�?lightweight tag)
 
-如果想要建立一個輕量級的標籤，請不要指定 `-a` `-s`(GPG-signed) `-m`
+如�??��?建�?一?��??��??��?籤�?請�?要�?�?`-a` `-s`(GPG-signed) `-m`
 
 ```cmd
 git tag tag_name [commit_id]
 ```
 
-如果只使用 `git tag tag_name` , 而沒加上後面 Commit id,
+如�??�使??`git tag tag_name` , ?��??��?後面 Commit id,
 
-則會自動把 tag 放在目前的這個 Commit id 上.
+?��??��???tag ?�在?��??�這�?Commit id �?
 
 顯示註解
 
@@ -1701,17 +1701,17 @@ git tag tag_name [commit_id]
 git show v1.1-light
 ```
 
-附註標籤(annotated tag)
+?�註標籤(annotated tag)
 
 ```cmd
 git tag -a v1.1 -m "version 1.1"
 ```
 
-`-a` 就是標籤名稱 `--annotate`
+`-a` 就是標籤?�稱 `--annotate`
 
-`-m` 代表該標籤說明(註解)
+`-m` �?��該�?籤說??註解)
 
-在指定的 commit 上設 tag
+?��?定�? commit 上設 tag
 
 ```cmd
 git tag -a v1.2 -m "version 1.1" [commit_id]
@@ -1723,41 +1723,41 @@ git tag -a v1.2 -m "version 1.1" [commit_id]
 git show v1.1
 ```
 
-輕量級標籤(lightweight tag) 和 附註標籤(annotated tag) 的差別就是是否能看到更多的細節,
+輕�?級�?�?lightweight tag) ???�註標籤(annotated tag) ?�差?�就?�是?�能?�到?��??�細節,
 
-附註標籤(annotated tag) 多了更多的資訊.
+?�註標籤(annotated tag) 多�??��??��?�?
 
-輕量級標籤(lightweight tag) 如下
+輕�?級�?�?lightweight tag) 如�?
 
 ![alt tag](https://i.imgur.com/4cUkdyQ.png)
 
-附註標籤(annotated tag) 如下
+?�註標籤(annotated tag) 如�?
 
 ![alt tag](https://i.imgur.com/DQWB1uh.png)
 
-當你執行 `git push` 預設是不會將 tag 推到 remote.
+?��??��? `git push` ?�設?��??��? tag ?�到 remote.
 
-需要執行以下的指令, push tag 到 remote 端
+?�要執行以下�??�令, push tag ??remote �?
 
 ```cmd
 git push origin [tagname]
 ```
 
-一次 push 很多 tags (將會把你全部不在 remote 端的 tag 都 push 上去.)
+一�?push 很�? tags (將�??��??�部不在 remote 端�? tag ??push 上去.)
 
 ```cmd
 git push origin --tags
 ```
 
-當其他人執行 `git clone` 或 `git fetch` 就可以拿到這些 tags.
+?�其他人?��? `git clone` ??`git fetch` 就可以拿?�這�? tags.
 
-移除本地 tag
+移除?�地 tag
 
 ```cmd
 git tag -d [tagname]
 ```
 
-刪除 remote tag
+?�除 remote tag
 
 ```cmd
 git push --delete origin [tagname]
@@ -1765,7 +1765,7 @@ git push --delete origin [tagname]
 
 ## git show
 
-一般來說，我只用他來看這個 commit 修改了哪些東西
+一?��?說�??�只?��?來�??��?commit 修改了哪些東�?
 
 ```cmd
 git show <commit ID>
@@ -1774,44 +1774,44 @@ git show <commit ID>
 ![alt tag](https://i.imgur.com/rjpl8VL.png)
 
 ```cmd
-git show [<options>] [<object>…​]
+git show [<options>] [<object>?�​]
 ```
 
-其他更詳細的介紹，請參考 [https://git-scm.com/docs/git-show](https://git-scm.com/docs/git-show)
+?��??�詳細�?介紹，�??��?[https://git-scm.com/docs/git-show](https://git-scm.com/docs/git-show)
 
 ## git diff
 
-以下為官方說明
+以�??��??�說??
 
 ```text
  Show changes between commits, commit and working tree, etc
 ```
 
-這邊舉幾個例子，
+?��??�幾?��?子�?
 
-檔案還沒進入暫存區 ( Stage )，也就是執行 git add xxx 之前，
+檔�??��??�入?��??� ( Stage )，�?就是?��? git add xxx 之�?�?
 
-可以看做了那些修改，
+?�以?��?了那些修?��?
 
 ![alt tag](https://i.imgur.com/nj5Gz5P.png)
 
-也可以看 commits 之間的差異
+也可以�? commits 之�??�差??
 
 ![alt tag](https://i.imgur.com/JMJ48jO.png)
 
-其他更詳細的介紹，請參考 [https://git-scm.com/docs/git-diff](https://git-scm.com/docs/git-diff)
+?��??�詳細�?介紹，�??��?[https://git-scm.com/docs/git-diff](https://git-scm.com/docs/git-diff)
 
 ## git grep
 
-以下為官方說明
+以�??��??�說??
 
 ```text
 git-grep - Print lines matching a pattern
 ```
 
-簡單說，就是可以幫你找出符合的 pattern，舉個例子，我希望找出內容
+簡單說�?就是?�以幫�??�出符�???pattern，�??��?子�??��??�找?�內�?
 
-有包含 hello 這個 pattern 的檔案，這時候，就可以執行以下指令
+?��???hello ?��?pattern ?��?案�??��??��?就可以執行以下�?�?
 
 ```cmd
 git grep "hello"
@@ -1819,13 +1819,13 @@ git grep "hello"
 
 ![alt tag](https://i.imgur.com/t5vxvvp.png)
 
-會顯示出該 pattern 在個檔案以及哪段程式碼有用到。
+?�顯示出�?pattern ?�個�?案以?�哪段�?式碼?�用?��?
 
-其他更詳細的介紹，請參考 [https://git-scm.com/docs/git-grep](https://git-scm.com/docs/git-grep)
+?��??�詳細�?介紹，�??��?[https://git-scm.com/docs/git-grep](https://git-scm.com/docs/git-grep)
 
 ## git Submodule
 
-由於這個內容稍微比較多，所以我另外寫了一篇，
+?�於?�個內容�?微�?較�?，�?以�??��?寫�?一篇�?
 
 * [Youtube Tutorial PART 1 - git Submodule tutorial - how to create submodule](https://youtu.be/IDMWLJCbCGo)
 
@@ -1839,7 +1839,7 @@ git grep "hello"
 
 ## git Subtree
 
-由於這個內容稍微比較多，所以我另外寫了一篇，
+?�於?�個內容�?微�?較�?，�?以�??��?寫�?一篇�?
 
 * [Youtube Tutorial PART 1 - git subtree tutorial - how to create subtree](https://youtu.be/kEvgK2gH_vg)
 
@@ -1849,47 +1849,47 @@ git grep "hello"
 
 [git subtree tutorial :memo:](https://github.com/twtrubiks/Git-Tutorials/blob/master/git_subtree_turorial.md)
 
-## git 其他設定
+## git ?��?設�?
 
-我們已經設定了 user.name 以及 user.email ，但 Git 上其實還有很多可設定的東西
+?�們已經設定�? user.name 以�? user.email ，�? Git 上其實�??��?多可設�??�東�?
 
-有時候，我們必須把某些檔案 ( 文件夾 ) 放到 Git 工作目錄中，但又不能提交它們，
+?��??��??�們�??��??��?檔�? ( ?�件�?) ?�到 Git 工�??��?中�?但�?不能?�交它們�?
 
-像是密碼設定或是編譯器 IDE 產生出來的東西之類的，
+?�是密碼設�??�是編譯??IDE ?��??��??�東西�?類�?�?
 
-每次 git status 都會看到紅紅的 Untracked files ，通常會覺得有點煩......
+每次 git status ?��??�到紅�???Untracked files ，通常?�覺得�?點煩......
 
-這問題 Git 也幫我們想過，只要在 Git 工作區的根目錄下新建一個特殊的 **.gitignore** 文件 ，
+?��?�?Git 也幫?�們想?��??��???Git 工�??�?�根?��?下新建�??�特殊�? **.gitignore** ?�件 �?
 
-然後把要忽略的文件 ( 檔案 ) 名稱輸入進去， Git 就會自動忽略這些文件。
+?��??��?忽略?��?�?( 檔�? ) ?�稱輸入?�去�?Git 就�??��?忽略?��??�件??
 
-當然不需要自己從頭寫 .gitignore 文件， GitHub 已經幫我們準備了一些文件 [gitignore](https://github.com/github/gitignore)
+?�然不�?要自己�??�寫 .gitignore ?�件�?GitHub 已�?幫�??��??��?一些�?�?[gitignore](https://github.com/github/gitignore)
 
-**.gitignore** 檔案直接放在目錄底下即可
+**.gitignore** 檔�??�接?�在?��?底�??�可
 
 ![alt tag](https://i.imgur.com/8rHPsII.jpg)
 
-### .gitignore 檔案格式範例
+### .gitignore 檔�??��?範�?
 
 ![alt tag](https://i.imgur.com/W3cxk9r.jpg)
 
 ### .gitignore (Temporarily and Permanently)
 
-主要分 暫時(Temporarily) 和 永久(Permanently) 的ignore，
+主�????��?(Temporarily) ??永�?(Permanently) ?�ignore�?
 
 * Temporarily ignore
 
-適合使用在 settings 的檔案，有時候我們在開發的時候，都會有自己的設定，
+?��?使用??settings ?��?案�??��??��??�在?�發?��??��??��??�自己�?設�?�?
 
-但這個設定未必是大家都需要的，這時候就可以暫時先忽略這個檔案的改變。
+但這個設定未必是大家?��?要�?，這�??�就?�以?��??�忽?�這個�?案�??��???
 
-暫時忽略某個檔案
+?��?忽略?�個�?�?
 
 ```cmd
 git update-index --skip-worktree <file>
 ```
 
-恢復(Resume)暫時忽略某個檔案
+?�復(Resume)?��?忽略?�個�?�?
 
 ```cmd
 git update-index --no-skip-worktree <file>
@@ -1897,34 +1897,34 @@ git update-index --no-skip-worktree <file>
 
 * Permanently ignore
 
-這邊補充一個情境，假設今天 file 這個檔案已經被 commit 到 git 中了，
+?��?補�?一?��?境�??�設今天 file ?�個�?案已經被 commit ??git 中�?�?
 
-但是我想把他加入 .gitignore，這樣該怎麼辦:question:
+但是?�想?��??�入 .gitignore，這樣該怎麼�?question:
 
-如果你在 .gitignore 中加入 file，你會發現還是沒有被 ignore:confused:
+如�?你在 .gitignore 中�???file，�??�發?��??��??�被 ignore:confused:
 
 ![alt tag](https://i.imgur.com/o922paa.png)
 
-這時候，正確的做法應該是要先執行已下指令，
+?��??��?�?��?��?法�?該是要�??��?已�??�令�?
 
 ```cmd
 git rm --cached <file>
 ```
 
-執行完後再 commit 即可 ( 檔案不會從系統上刪除，只是要更新 git 的 index 而已 )
+?��?完�???commit ?�可 ( 檔�?不�?從系統�??�除，只?��??�新 git ??index ?�已 )
 
 ![alt tag](https://i.imgur.com/RJZ08OQ.png)
 
-這時候可以再嘗試更新 file 的內容，你會發現它成功被 ignore 了:smile:
+?��??�可以�??�試?�新 file ?�內容�?你�??�現它�??�被 ignore �?smile:
 
 ### git alias
 
-有時候常常手殘 key 錯指令或是記不起來
+?��??�常常�?�?key ?��?令�??��?不起�?
 
-如果我們打 git st 就表示 git status 那該有多棒!!!
+如�??�們�? git st 就表�?git status ??��?��?�?!!
 
-所以我們可以自己設定，讓 Git 以後打 **git st = git status**
-如下圖，原本不能使用 git st ，設定完之後就可以使用了。
+?�以�??�可以自己設定�?�?Git 以�???**git st = git status**
+如�??��??�本不能使用 git st ，設定�?之�?就可以使?��???
 
 ```cmd
 git config --global alias.st status
@@ -1954,37 +1954,37 @@ git config --global alias.cm commit
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
 ```
 
-將前面這一大串變成一個別名，這樣以後只需要執行 `git lg` 即可，
+將�??�這�?大串變�?一?�別?��??�樣以�??��?要執�?`git lg` ?�可�?
 
 ![alt tag](https://i.imgur.com/IvQLsMR.png)
 
-可能有人會問，那這個設定檔文件在哪裡呢?
+?�能?�人?��?，那?�個設定�??�件?�哪裡呢?
 
-通常會在你的使用者底下，例如我這台電腦使用者為 HJ，設定檔文件就會在 **C:\Users\HJ** 底下，
+?�常?�在你�?使用?��?下�?例�??�這台?�腦使用?�為 HJ，設定�??�件就�???**C:\Users\HJ** 底�?�?
 
-他是一個  **隱藏文件.gitconfig** ，打開他的話格式如下。
+他是一?? **?��??�件.gitconfig** ，�??��??�話?��?如�???
 
 ![alt tag](https://i.imgur.com/iXjIqv9.jpg)
 
-不知道大家有沒有注意到 `--global` 這個參數，他代表的意思是全域的，如果說你今天是執行
+不知?�大家�?沒�?注�???`--global` ?�個�??��?他代表�??�思是?��??��?如�?說�?今天?�執�?
 
 ```cmd
 git config alias.stu status
 ```
 
-代表只有在該目錄底下時才會有作用。
+�?��?��??�該?��?底�??��??��?作用??
 
-那這個有什麼用呢？ 試想一種情境，假設你在特定的資料夾底下，想要使用特定的信箱去 push，而其他的資料夾，
+??��個�?什麼用?��? 試想一種�?境�??�設你在?��??��??�夾底�?，想要使?�特定�?信箱??push，而其他�?資�?夾�?
 
-則一樣使用公司的信箱，這時候，就非常適合使用這種方法完成。
+?��?�?��?�公?��?信箱，這�??��?就�?常適?�使?�這種?��?完�???
 
-更多資訊細節可使用以下命令查看
+?��?資�?細�??�使?�以下命令查??
 
 ```cmd
 man git-config
 ```
 
-### git 更新
+### git ?�新
 
 ```cmd
 sudo add-apt-repository ppa:git-core/ppa
@@ -1994,15 +1994,15 @@ sudo apt-get install git
 
 ![alt tag](https://i.imgur.com/WrQNZln.png)
 
-## 使用 Git 一次 Push 到多個不同的遠端 ( remote )
+## 使用 Git 一�?Push ?��??��??��??�端 ( remote )
 
-假如有一天 github 掛了，這樣是不是就不能 work 了，你可能會說本地端還有 ?
+?��??��?�?github ?��?，這樣?��??�就不能 work 了�?你可?��?說本?�端?��? ?
 
-但......多備份絕對是好事 !!  再這裡介紹如何一次 Push 到多個不同的遠端 ( remote )
+�?.....多�?份�?對是好�? !!  ?�這裡介紹如�?一�?Push ?��??��??��??�端 ( remote )
 
-這裡用 [Bitbucket](https://bitbucket.org/product) 當作範例
+?�裡??[Bitbucket](https://bitbucket.org/product) ?��?範�?
 
-先使用下方指令查看
+?�使?��??��?令查??
 
 ```cmd
 git remote -v
@@ -2010,9 +2010,9 @@ git remote -v
 
 ![alt tag](https://i.imgur.com/Qb5VHoP.png)
 
-git remote 這個指令的更多說明可參考官方文件 [git-remote](https://git-scm.com/docs/git-remote)。
+git remote ?�個�?令�??��?說�??��??��??��?�?[git-remote](https://git-scm.com/docs/git-remote)??
 
-接著我們使用下列指令新增一個 origin 的遠端
+?��??�們使?��??��?令新增�???origin ?��?�?
 
 ```cmd
 git remote set-url --add origin <url>
@@ -2024,15 +2024,15 @@ git remote set-url --add origin git@github.com:twtrubiks/test2.git
 
 ![alt tag](https://i.imgur.com/FKzexVE.png)
 
-我們再用 git remote -v 查看一次，你會發現多了剛剛新增的遠端 ( remote )
+?�們�???git remote -v ?��?一次�?你�??�現多�??��??��??��?�?( remote )
 
 ![alt tag](https://i.imgur.com/p1q7C4b.png)
 
-最後我們再 push
+?�後�??��? push
 
 ![alt tag](https://i.imgur.com/6VKh8Bz.png)
 
-仔細看，是不是一次 push 到多個不同的遠端 ( remote )，非常方便!!
+仔細?��??��??��?�?push ?��??��??��??�端 ( remote )，�?常方�?!
 
 ***GitHub***
 
@@ -2042,17 +2042,17 @@ git remote set-url --add origin git@github.com:twtrubiks/test2.git
 
 ![alt tag](https://i.imgur.com/rkYHNl4.png)
 
-P.S 設定檔在資料夾底下的隱藏檔 ".git" 底下，裡面有一個 config
+P.S 設�?檔在資�?夾�?下�??��?�?".git" 底�?，裡?��?一??config
 
 ![alt tag](https://i.imgur.com/41xb8eu.png)
 
-補充幾個 git remote 的指令，他也支援 rename 以及 remove ，
+補�?幾�?git remote ?��?令�?他�??�援 rename 以�? remove �?
 
-現在的 remote 如下，
+?�在??remote 如�?�?
 
 ![alt tag](https://i.imgur.com/rr9SE3g.png)
 
-讓我們重新命名 remote，語法如下，
+讓�??��??�命??remote，�?法�?下�?
 
 ```text
 git remote rename <old> <new>
@@ -2062,11 +2062,11 @@ git remote rename <old> <new>
 git remote rename origin2 origin
 ```
 
-執行後，你會發現 remote 成功被修改成 origin 了，
+?��?後�?你�??�現 remote ?��?被修?��? origin 了�?
 
 ![alt tag](https://i.imgur.com/ixP1H7Z.png)
 
-接下來我們試試 remove，語法如下，
+?��?來�??�試�?remove，�?法�?下�?
 
 ```text
 git remote remove <name>
@@ -2076,11 +2076,11 @@ git remote remove <name>
 git remote remove origin
 ```
 
-成功刪除，現在 remote 是空的了，
+?��??�除，現??remote ?�空?��?�?
 
 ![alt tag](https://i.imgur.com/OQFRWDg.png)
 
-接下來我們嘗試新增一個 remote，指令如下，
+?��?來�??��?試新增�???remote，�?令�?下�?
 
 ```text
 git remote add [-t <branch>] [-m <master>] [-f] [--[no-]tags] [--mirror=<fetch|push>] <name> <url>
@@ -2092,7 +2092,7 @@ git remote add origin git@github.com:blue-rubiks/t11.git
 
 ![alt tag](https://i.imgur.com/cKsiBBs.png)
 
-如果我們想修改 origin 的 url，可以使用
+如�??�們想修改 origin ??url，可以使??
 
 ```cmd
 git remote set-url origin git@blue.github.com:blue-rubiks/t11.git
@@ -2106,67 +2106,67 @@ git remote set-url origin git@blue.github.com:blue-rubiks/t11.git
 
 [Multiple SSH Keys settings for different github account](https://github.com/twtrubiks/Git-Tutorials/blob/master/Multiple_SSH_Keys_settings.md)
 
-## Git-Flow  基本教學以及概念
+## Git-Flow  ?�本?�學以�?概念
 
 * [Git-Flow Tutorials - youtube](https://youtu.be/zXlta66thZY)
 
 * [Git-Flow SmartGit Tutorials - youtube](https://youtu.be/ualXHytifbg)
 
-[Git-Flow  基本教學以及概念](https://github.com/twtrubiks/Git-Tutorials/tree/master/Git-Flow)
+[Git-Flow  ?�本?�學以�?概念](https://github.com/twtrubiks/Git-Tutorials/tree/master/Git-Flow)
 
-## PR (Pull Request) 教學
+## PR (Pull Request) ?�學
 
-* [Youtube Tutorial - github PR (Pull Request) 教學](https://youtu.be/bXOdD-bKfkA) - [文章快速連結](https://github.com/twtrubiks/Git-Tutorials/tree/master/pr-tutorial#github-pr-pull-request-%E6%95%99%E5%AD%B8)
+* [Youtube Tutorial - github PR (Pull Request) ?�學](https://youtu.be/bXOdD-bKfkA) - [?��?快速�??](https://github.com/twtrubiks/Git-Tutorials/tree/master/pr-tutorial#github-pr-pull-request-%E6%95%99%E5%AD%B8)
 
-* [Youtube Tutorial - github CLI PR 教學 - gh](https://youtu.be/AD8X11lq3gQ) - [文章快速連結](https://github.com/twtrubiks/Git-Tutorials/tree/master/pr-tutorial#github-cli-pr-%E6%95%99%E5%AD%B8)
+* [Youtube Tutorial - github CLI PR ?�學 - gh](https://youtu.be/AD8X11lq3gQ) - [?��?快速�??](https://github.com/twtrubiks/Git-Tutorials/tree/master/pr-tutorial#github-cli-pr-%E6%95%99%E5%AD%B8)
 
-[PR (Pull Request) 教學](https://github.com/twtrubiks/Git-Tutorials/tree/master/pr-tutorial)
+[PR (Pull Request) ?�學](https://github.com/twtrubiks/Git-Tutorials/tree/master/pr-tutorial)
 
-## Linux 注意事項
+## Linux 注�?事�?
 
-* [Youtube Tutorial - Linux 教學 - git 乎略 file mode (chmod) 改變](https://youtu.be/QCh2k903Yak)
+* [Youtube Tutorial - Linux ?�學 - git 乎略 file mode (chmod) ?��?](https://youtu.be/QCh2k903Yak)
 
-這邊是和大家說一些同時在 windows 以及 linux 底下使用 git 可能會遇到的問題.
+?��??��?大家說�?些�??�在 windows 以�? linux 底�?使用 git ?�能?��??��??��?.
 
-首先, 在 linux 底下執行以下指令
+首�?, ??linux 底�??��?以�??�令
 
 ```cmd
 sudo chmod -R 777 folder
 ```
 
-git 會默認它為改變, 要怎麼把它忽略呢 ? 請執行以下指令 ,
+git ?��?認�??�改�? 要怎麼?��?忽略??? 請執行以下�?�?,
 
 ```cmd
 git config core.fileMode false
 ```
 
-也可參考這篇文章 [Git ignore file mode (chmod) changes](https://stackoverflow.com/questions/1580596/how-do-i-make-git-ignore-file-mode-chmod-changes)
+也可?�考這�??��? [Git ignore file mode (chmod) changes](https://stackoverflow.com/questions/1580596/how-do-i-make-git-ignore-file-mode-chmod-changes)
 
-### 格式化
+### ?��???
 
 `core.autocrlf`
 
-Windows 使用 Enter (Carriage Return 簡寫為 CR) 和 換行(Line Feed 簡寫為 LF) 這兩個字元來定義換行,
+Windows 使用 Enter (Carriage Return 簡寫??CR) ???��?(Line Feed 簡寫??LF) ?�兩?��??��?定義?��?,
 
-而 Mac 和 Linux 只使用一個換行 (Line Feed 簡寫為 LF) 字元.
+??Mac ??Linux ?�使?��??��?�?(Line Feed 簡寫??LF) 字�?.
 
-所以會導致跨平台協作時出問題.
+?�以�?導致跨平?��?作�??��?�?
 
-在 windows 上可以這樣設定 ( 代表 LF 會被轉換成 CRLF)
+??windows 上可以這樣設�? ( �?�� LF ?�被轉�???CRLF)
 
 ```cmd
 git config --global core.autocrlf true
 ```
 
-Linux 或 Mac 系統
+Linux ??Mac 系統
 
 ```cmd
 git config --global core.autocrlf input
 ```
 
-以上這樣設定, 會在 Windows 上保留 CRLF，而在 Mac 和 Linux 以及 repo 中保留 LF.
+以�??�樣設�?, ?�在 Windows 上�???CRLF，而在 Mac ??Linux 以�? repo 中�???LF.
 
-如果你想更深入的了解, 可參考 [格式化-core.autocrlf](https://git-scm.com/book/zh-tw/v1/Git-客製化-Git-設定#格式化與空格).
+如�?你想?�深?��?了解, ?��???[?��???core.autocrlf](https://git-scm.com/book/zh-tw/v1/Git-客製??Git-設�?#?��??��?空格).
 
 ### 修改 editor
 
@@ -2180,20 +2180,20 @@ git config --global core.editor "vim"
 
 ## Donation
 
-文章都是我自己研究內化後原創，如果有幫助到您，也想鼓勵我的話，歡迎請我喝一杯咖啡:laughing:
+?��??�是?�自己�?究內?��??�創，�??��?幫助?�您，�??��??��??�話，歡迎�??��?一?��???laughing:
 
-綠界科技ECPAY ( 不需註冊會員 )
+綠�?科�?ECPAY ( 不�?註�??�員 )
 
 ![alt tag](https://payment.ecpay.com.tw/Upload/QRCode/201906/QRCode_672351b8-5ab3-42dd-9c7c-c24c3e6a10a0.png)
 
-[贊助者付款](http://bit.ly/2F7Jrha)
+[贊助?��?款](http://bit.ly/2F7Jrha)
 
-歐付寶 ( 需註冊會員 )
+歐�?�?( ?�註�??�員 )
 
 ![alt tag](https://i.imgur.com/LRct9xa.png)
 
-[贊助者付款](https://payment.opay.tw/Broadcaster/Donate/9E47FDEF85ABE383A0F5FC6A218606F8)
+[贊助?��?款](https://payment.opay.tw/Broadcaster/Donate/9E47FDEF85ABE383A0F5FC6A218606F8)
 
-## 贊助名單
+## 贊助?�單
 
-[贊助名單](https://github.com/twtrubiks/Thank-you-for-donate)
+[贊助?�單](https://github.com/twtrubiks/Thank-you-for-donate)
